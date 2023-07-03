@@ -1,0 +1,157 @@
+// .customBtn{
+//     position: relative;
+//     background-color: $theme1;
+//     padding: 21px 30px;
+//     transition: all 0.3s ease-in-out;
+//         &:hover{
+//         & .buttonBox_{
+//             & .lineLeft{
+//                     width: 29px;
+//                     opacity: 1;
+//                     margin-left: 15px;
+//             }
+//             & .lineRight{
+//                     opacity: 0;
+//                     width: 0;
+//                     margin-left: 0;
+//             }
+//             & .BtnText{
+//                     margin-left: 15px;
+//                     color: $theme2;
+//             }
+//         }
+        
+//     }
+//     & .buttonBox{
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         transition: all 0.3s ease-in-out;
+//         & .lineLeft{
+//             position: absolute;
+//             top: 50%;
+//             left: 0;
+//             margin-top: -1px;
+//             background-color:$theme2;
+//             width: 0;
+//             display: inline-block;
+//             height: 1px;
+//             vertical-align: middle;
+//             opacity: 0;
+//             transition: all 0.3s ease-in-out;
+//         }
+//         & .lineRight{
+//             background:$theme2;
+//             width: 29px;
+//             display: inline-block;
+//             height: 1px;
+//             vertical-align: middle;
+//             opacity: 1;
+//             margin-left: 15px;
+//             transition: all 0.3s ease-in-out;
+//         }
+//         & .BtnText{
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             color: $theme2;
+//             font-size: 18px;
+//             font-weight: 300;
+//             transition: all 0.3s ease-in-out;
+//         }
+//     }
+// }
+
+.CommonBtn{
+    padding: 16px 40px;
+    color: $theme2;
+    background-color: $theme1;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300 !important;
+    border: 1px solid $theme1;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background-color: transparent;
+        border: 1px solid $theme1;
+    }
+}
+.outlineBtn{
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid $theme1;
+    padding: 14px 40px;
+    &:hover{
+        background-color: $theme1;
+    }
+
+}
+.pq-button{
+    position: relative;
+    width: auto;
+    background: transparent;
+    border: 1px solid $white;
+    padding: 10px 30px;
+    line-height: 2;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: all 0.3s ease-in-out;
+    &::before{
+        position: absolute;
+        top: 50%;
+        content: "";
+        left: 29px;
+        margin-top: -1px;
+        background-color:$white ;
+        width: 29px;
+        display: inline-block;
+        height: 2px;
+        vertical-align: middle;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    
+    }
+    &::after{
+        position: absolute;
+        content: '';
+        background:$white;
+        width: 29px;
+        display: inline-block;
+        height: 1px;
+        vertical-align: middle;
+        opacity: 1;
+        right:20px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s ease-in-out;
+    }
+    & .pq-button-text{
+        transition: all 0.5s ease-in-out;
+        padding-right: 30px;
+        color: $white;   
+    }
+    &:hover{
+        background-color: $theme1;
+        & .pq-button-text {
+            left: 39px;
+            border: $theme1;
+            transition: all 0.3s ease-in-out;
+        }
+        &::before{
+            // padding-left: 30px;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        &::after{
+            padding-left: 0px !important;
+            opacity: 0 !important;
+        }
+    }
+}

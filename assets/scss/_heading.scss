@@ -1,0 +1,16 @@
+.pageHeading{
+    & .seuHeading{
+        font-size: 18px;
+        line-height: 26px;
+        color: $theme1;
+        font-weight: 300;
+        font-family: 'Miniver', cursive;
+    }
+    & .heading{
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 56px;
+        color: $theme2;
+        font-family: 'Josefin Sans';
+    }
+}

@@ -1,0 +1,92 @@
+.footer{
+    & .footerLogo{
+        height: 45px;
+        width: 190px;
+    }
+    & .pera{
+        font-size: 14px;
+        color: $theme2;
+    }
+    & .newsLetter{
+        & .input-group{
+            & .form-control{
+                border: 1px solid $white;
+                &::placeholder{
+                    font-size: 14px;
+                    color: $theme2;
+                }
+                &:focus{
+                border: 1px solid $white;
+
+                }
+            }
+            & .input-group-text{
+                height: 42px;
+                width: 42px;
+            }
+        }
+    }
+    & .socialIcon{
+        & ul{
+            & li{
+                & a{
+                    position: relative;
+                    transition: all 0.3s ease-in-out;
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        width: 35px;
+                        height: 35px;
+                        border: 2px dotted $theme2;
+                        border-radius: 50%;
+                        animation: rotate 15s linear infinite;
+                        transition: .3s ease-in-out;
+                        opacity: 1;
+                    }
+                    &:hover{
+                        transform: scale(0.9);
+                    }
+                }
+            }
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(90deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            75% {
+                transform: rotate(270deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+    }
+    & .heading{
+        font-size: 18px;
+        color: $theme2;
+        line-height: 26px;
+    }
+    & .footerLink{
+        & a{
+            & .pera{
+                transition: all 0.3s ease-in-out;
+            }
+            &:hover{
+                & .pera{
+                    color: $theme1;
+                }
+            }
+        }
+    }
+}
