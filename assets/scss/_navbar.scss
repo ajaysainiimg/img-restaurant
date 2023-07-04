@@ -688,6 +688,28 @@ header{
                     }
                 }
             }
+            & .search-form{
+                right: 20px;
+                width: 280px;
+                height: 60px;
+                padding: 10px;
+                & input{
+                 
+                    &::placeholder{
+                     
+                      
+                    }
+                    & .icon{
+                      height: 30px;
+                      width: 30px;
+                    }
+                    
+                }
+                &.active{
+                    
+                }
+    
+            }
         }
     }
     

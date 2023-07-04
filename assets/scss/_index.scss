@@ -80,17 +80,17 @@
     & .owl-dots{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: end;
         position: absolute;
         bottom: 20px;
         left: 50%;
         gap: 5px;
         transform: translateX(-505);
         & .owl-dot{
-            height: 10px;
-            width: 10px;
+            height: 15px;
+            width: 15px;
             border: 1px solid $theme1;
-            border-radius: 50%;
+            // border-radius: 50%;
             &.active{
                 background-color: $theme1 !important;
             }
@@ -847,31 +847,8 @@
             font-weight: 400;
             line-height: 30px;
             color: $theme1;
-            &::before   {
-                position: absolute ;
-                content:'';
-                background-color: $theme1;
-                width: 230px;
-                left: 118px;
-                height: 1%;
-                top: 50%;
-                transform: translateX(-50%);
-            }
-            // &:after{
-            //     position: absolute;
-            //     content: '';
-            //     background-image: url(../img/Main-page/offer1.jpg);
-            //     background-position: center;
-            //     background-repeat: no-repeat;
-            //     background-size: cover;
-            //     width: 160px;
-            //     height: 160px;
-            //     left: 60%;
-            //     top: 50%;
-            //     transform: translateY(-50%);
-            //     opacity: 1;
-            //     border: 1px solid $theme1;
-            // }
+          
+    
         }
         & .pera{
             font-weight: 300;
@@ -902,6 +879,17 @@
                 border: 1px solid $theme1;
             }
      
+        }
+        & .line{
+            position: absolute;
+            counter:'';
+            width: 100%;
+            background-color: $theme1;
+            height: 1px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
         }
     }
 }
@@ -1113,12 +1101,13 @@
 // video section start
 .videoSection{
     & .frame{
-        left: 60px;
+        left: 90px;
         top: 50%;
+        height: 470px;
         transform: translateY(-50%);
         border-radius: 50%;
     }
-    & .videoSection{
+    & .videoSection1{
         background-image: url(../img/Main-page/video.jpg);
         background-position: center;
         background-repeat: no-repeat;
@@ -1128,6 +1117,7 @@
         position: relative;
         height: 520px;
         z-index: 4;
+    
         & .videoPlay{
             & a{
                 margin: auto;
@@ -1181,7 +1171,7 @@
         & .frame{
       
         }
-        & .videoSection{
+        & .videoSection1{
         
             & .videoPlay{
                 & a{
@@ -1199,8 +1189,8 @@
         & .frame{
       
         }
-        & .videoSection{
-        
+        & .videoSection1{
+      
             & .videoPlay{
                 & a{
        
@@ -1217,7 +1207,7 @@
         & .frame{
       
         }
-        & .videoSection{
+        & .videoSection1{
             height: 425px;
             & .videoPlay{
                 & a{
@@ -1235,7 +1225,7 @@
         & .frame{
       
         }
-        & .videoSection{
+        & .videoSection1{
             height: 370px;
         
             & .videoPlay{
@@ -1256,7 +1246,7 @@
         & .frame{
       
         }
-        & .videoSection{
+        & .videoSection1{
             height: 350px;
             & .videoPlay{
                 & a{
@@ -1279,6 +1269,15 @@
             color: $white;
             font-size: 14px;
             border: 1px solid $white;
+            transition: all 0.3s ease-in-out;
+            &:focus{
+            border: 1px solid $theme2;
+                
+            }
+            &:hover{
+            border: 1px solid $theme1;
+
+            }
             &::placeholder{
                 font-size: 14px;
                 color: $white;
