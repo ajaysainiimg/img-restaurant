@@ -69,11 +69,11 @@
 </head>
 <body>
 <!-- header start  -->
-<header class="container-fluid py-4 px-0 fixed-top" >
-  <div class="topHeader">
+<header class="container-fluid py-md-4 px-0 fixed-top" >
+  <div class="topHeader d-md-block d-none">
     <div class="container">
-      <div class="row">
-        <div class="col-6 ">
+      <div class="row align-items-center">
+        <div class="col-8 ">
               <div class="headerContact">
                 <ul class="list-unstyled d-flex align-items-center gap-5">
                   <li><a href="#" class="d-flex align-items-center text-decoration-none"><span class="d-inline-flex icon me-2"><img src="assets/img/Navbar/Phone.svg" alt="contact" class="img-fluid w-100 h-100"></span> + 1800-001-658</a></li>
@@ -81,7 +81,7 @@
                 </ul>
               </div>
         </div>
-        <div class="col-6">
+        <div class="col-4">
               <div class="socialIcon">
                 <ul class="list-unstyled d-flex align-items-center justify-content-end gap-4">
                   <li><a href="#" class="d-flex align-items-center justify-content-center icon"><img src="assets/img/Navbar/facebook.svg" alt="facebook" class="img-fluid w-100 h-100"></a></li>
@@ -100,16 +100,14 @@
         <div class="col-12">
           <nav class="navbar navbar-expand-lg navbar-dark bg-black p-0" aria-label="Offcanvas navbar large">
               <a class="navbar-brand logo" href="#" aria-colspan=""><img src="assets/img/Navbar/logo.svg" alt="navbarLogo" class="img-fluid w-100 h-100"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-end text-bg-dark navOffcanvas" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+         
+              <div class="offcanvas offcanvas-start text-bg-dark navOffcanvas" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  <div class="offcanvas-title logo" id="offcanvasNavbar2Label"><img src="assets/img/Navbar/logo.svg" alt="logo" class="img-fluid w-100 h-100"></div>
+                  <button type="button" class="btn-close btn-close-white border-0 shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 p-0 align-items-center gap-3">
+                  <ul class="navbar-nav justify-content-lg-end flex-grow-1 p-0 align-items-lg-center gap-lg-3 gap-md-2">
                     <li class="nav-item">
                       <a class="nav-link fw-normal active" aria-current="page" href="#">Home</a>
                     </li>
@@ -134,29 +132,28 @@
                       <a class="nav-link fw-normal" aria-current="page" href="#">Contact</a>
                     </li>
                   </ul>
-                  <div class="ps-4 d-flex align-items-center gap-3">
-                    <a href="#" class="text-decoration-none d-flex align-items-center icon"><img src="assets/img/Navbar/Search.svg" alt="search" class="img-fluid w-100 h-100"></a>
-                    <a href="#" class="text-decoration-none CommonBtn"> 
-                      Book A Table
-                    </a>
-                    <!-- <a href="#" class="customBtn text-decoration-none">
-                      <div class="buttonBox d-flex align-items-center justify-content-start">
-                        <span class="lineLeft"></span>
-                        <span class="BtnText">Book A Table</span>
-                        <span class="lineRight"></span>
-                      </div>
-                    </a> -->
-                  </div>
-                  <!-- <form class="d-flex mt-3 mt-lg-0" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form> -->
                 </div>
+              </div>
+              <div class="ps-4 d-flex align-items-center gap-3 ">
+                <button class="navbar-toggler border-0 shadow-none px-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon icon d-inline-flex"><img src="assets/img/Navbar/Menu.svg" alt="menu" class="img-fluid w-100 h-100"></span>
+                </button>
+                <a href="#" class="text-decoration-none d-flex align-items-center icon" id="search-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><img src="assets/img/Navbar/Search.svg" alt="search" class="img-fluid w-100 h-100"></a>
+                
+                  <div class="pageButton outlineBtn d-inline-block d-md-block d-none">
+                    <a href="#" class="text-decoration-none d-flex align-items-center justify-content-start position-relative">
+                      <span>Book A Table</span>
+                    </a>
+                  </div>
               </div>
           </nav>
         </div>
       </div>
     </div>
+    <div class="search-form input-group position-absolute">
+      <input type="text" class="form-control bg-transparent shadow-none rounded-0 border-end-0" id="search-btn" placeholder="Search.." aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <span class="input-group-text bg-transparent rounded-0 border-start-0" id="basic-addon2"><img src="assets/img/Navbar/Search.svg" alt="search" class="img-fluid w-1-00 h-100"></span>
+  </div>
   </div>
 </header>
 <!-- header end  -->
@@ -167,15 +164,17 @@
       <div class="item h-100">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-8 mx-auto heroConternt text-white mt-5" >
-            <div class="row mx-0 align-items-center justify-content-center text-center gap-3 mt-5">
+            <div class="col-md-8 mx-auto heroConternt text-white mt-5" >
+            <div class="row mx-0 align-items-center justify-content-center text-center gap-md-3 gap-1 mt-md-5">
               <div class="col-12 px-0 subheading fw-normal">MAKE A ORDER</div>
               <div class="col-12 px-0 heading fw-medium">Delicious Food The Best Only Taste Wonder</div>
               <div class="col-12 px-0 pera fw-normal pb-1">Mistaken idea Of Denouncing Pleasure And Praising Pain</div>
-              <div class="col-auto px-0 mt-4" >
-                <a href="#" class="text-decoration-none CommonBtn outlineBtn"> 
-                  Read More
-                </a>
+              <div class="col-auto px-0  position-relative">
+                <div class="pageButton d-inline-block">
+                  <a href="#" class="text-decoration-none d-flex align-items-center justify-content-start position-relative">
+                    <span>Read More</span>
+                  </a>
+                </div>
               </div>
             </div>
             </div>
@@ -185,15 +184,17 @@
       <div class="item item2 h-100" >
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-8 mx-auto heroConternt text-white mt-5">
-            <div class="row mx-0 align-items-center justify-content-center text-center gap-3 mt-5">
+            <div class="col-md-8 mx-auto heroConternt text-white mt-5">
+            <div class="row mx-0 align-items-center justify-content-center text-center gap-3 mt-md-5">
               <div class="col-12 px-0 subheading fw-normal">MAKE A ORDER</div>
               <div class="col-12 px-0 heading fw-medium">Delicious Food The Best Only Taste Wonder</div>
               <div class="col-12 px-0 pera fw-normal pb-1">Mistaken idea Of Denouncing Pleasure And Praising Pain</div>
-              <div class="col-auto px-0 mt-4" >
-                <a href="#" class="text-decoration-none CommonBtn outlineBtn"> 
-                  Read More
-                </a>
+              <div class="col-auto px-0  position-relative">
+                <div class="pageButton d-inline-block">
+                  <a href="#" class="text-decoration-none d-flex align-items-center justify-content-start position-relative">
+                    <span>Read More</span>
+                  </a>
+                </div>
               </div>
             </div>
             </div>
@@ -203,15 +204,17 @@
       <div class="item item3 h-100" >
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-8 mx-auto heroConternt text-white mt-5">
+            <div class="col-md-8 mx-auto heroConternt text-white mt-md-5">
             <div class="row mx-0 align-items-center justify-content-center text-center gap-3 mt-5">
               <div class="col-12 px-0 subheading fw-normal">MAKE A ORDER</div>
               <div class="col-12 px-0 heading fw-medium">Delicious Food The Best Only Taste Wonder</div>
               <div class="col-12 px-0 pera fw-normal pb-1">Mistaken idea Of Denouncing Pleasure And Praising Pain</div>
-              <div class="col-auto px-0 mt-4" >
-                <a href="#" class="text-decoration-none CommonBtn outlineBtn"> 
-                  Read More
-                </a>
+              <div class="col-auto px-0  position-relative">
+                <div class="pageButton d-inline-block">
+                  <a href="#" class="text-decoration-none d-flex align-items-center justify-content-start position-relative">
+                    <span>Read More</span>
+                  </a>
+                </div>
               </div>
             </div>
             </div>
@@ -219,13 +222,15 @@
         </div>
       </div>
     </div>
+
+
 </div>
 <!-- heroSection end  -->
 <!-- about start  -->
-<div class="container-fluid aboutUs bg-dark py-5">
-  <div class="container py-5">
-    <div class="row align-items-center py-5">
-      <div class="col-6">
+<div class="container-fluid aboutUs bg-dark py-lg-5 py-md-4 py-3">
+  <div class="container py-xl-5 py-lg-4">
+    <div class="row align-items-center py-xl-5 py-lg-4 gap-lg-0 gap-4">
+      <div class="col-lg-6 order-lg-1 order-2">
         <div class="aboutContent">
           <div class="row mx-0 gap-1">
             <div class="col-12 px-0 subheading fw-normal">About Us</div>
@@ -235,15 +240,17 @@
 							architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
 							aspernatur aut odit aut.
             </div>
-            <div class="col-auto px-0 mt-4" >
-              <a href="#" class="text-decoration-none CommonBtn outlineBtn"> 
-                Read More
-              </a>
+            <div class="col-auto px-0  position-relative pt-lg-4 pt-md-3 pt-2">
+              <div class="pageButton d-inline-block">
+                <a href="#" class="text-decoration-none d-flex align-items-center justify-content-start position-relative">
+                  <span>Read More</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-6">
+      <div class="col-lg-6 order-lg-2 order-1">
         <div class="aboutImg"><img src="assets/img/Main-page/about1.jpg" alt="aboutus" class="img-fluid w-100 h-100"></div>
       </div>
     </div>
@@ -251,16 +258,16 @@
 </div>
 <!-- about end -->
 <!-- services start  -->
-<div class="container-fluid bg-black py-5 service">
+<div class="container-fluid bg-black py-lg-5 py-md-4 py-3 service">
   <div class="container">
-    <div class="row py-5">
+    <div class="row py-xl-5 py-lg-4 ">
       <div class="col-12 pageHeading text-center">
         <div class="seuHeading">Services</div>
         <div class="heading">Try Our Special Offer</div>
       </div>
-      <div class="col-12 py-5">
-        <div class="row mx-0">
-          <div class="col-4">
+      <div class="col-12 py-lg-5 py-4">
+        <div class="row mx-0 g-4">
+          <div class="col-lg-4 col-md-6 col-12">
             <div class="card bg-transparent servicesCard border rounded-0 h-100">
                 <div class="row mx-0 text-center gap-2 ">
                   <div class="col-12 px-0">
@@ -271,7 +278,7 @@
                 </div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-lg-4 col-md-6 col-12">
             <div class="card bg-transparent servicesCard border rounded-0 h-100">
                 <div class="row mx-0 text-center gap-2 ">
                   <div class="col-12 px-0">
@@ -282,7 +289,7 @@
                 </div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-lg-4 col-12">
             <div class="card bg-transparent servicesCard border rounded-0 h-100">
                 <div class="row mx-0 text-center gap-2 ">
                   <div class="col-12 px-0">
@@ -301,17 +308,17 @@
 
 <!-- services end  -->
 <!-- dailyOffer start  -->
-<div class="container-fluid py-5 bg-dark dailyOffers">
+<div class="container-fluid py-lg-5 py-md-4 py-3 bg-dark dailyOffers">
   <div class="container">
-    <div class="row py-5">
+    <div class="row py-xl-5 py-lg-4">
       <div class="col-12 pb-4 pageHeading text-center">
         <div class="seuHeading">From Our Menu</div>
         <div class="heading">Try Our Daily Offers</div>
       </div>
-      <div class="col-12 py-5">
-        <div class="row mx-0 ">
-          <div class="col-6">
-            <div class="row mx-0 gap-5">
+      <div class="col-12 py-xl-5 py-lg-4">
+        <div class="row mx-0 g-lg-0 g-sm-4 g-3">
+          <div class="col-lg-6 col-12 ">
+            <div class="row mx-0 gap-sm-5 gap-3">
               <div class="col-12 px-0 offerItem position-relative">
                 <div class="row mx-0 align-items-center">
                   <div class="col-auto px-0">
@@ -321,8 +328,8 @@
                     <div class="row mx-0">
                       <div class="col-12 px-0">
                         <div class="row mx-0 align-items-center">
-                          <div class="col-auto heading fw-normal">Cafe Alatee</div>
-                          <div class="col fw-normal text-end subheading position-relative">$ 3.45</div>
+                          <div class="col-sm-auto heading fw-normal">Cafe Alatee</div>
+                          <div class="col-sm fw-normal text-sm-end subheading position-relative">$ 3.45</div>
                         </div>
                       </div>
                       <div class="hoverImg">
@@ -344,8 +351,8 @@
                     <div class="row mx-0">
                       <div class="col-12 px-0">
                         <div class="row mx-0 align-items-center">
-                          <div class="col-auto heading fw-normal">Salmon Lox</div>
-                          <div class="col fw-normal text-end subheading position-relative">$ 3.45</div>
+                          <div class="col-sm-auto heading fw-normal">Salmon Lox</div>
+                          <div class="col-sm fw-normal text-sm-end subheading position-relative">$ 3.45</div>
                         </div>
                       </div>
                       <div class="hoverImg">
@@ -367,8 +374,8 @@
                     <div class="row mx-0">
                       <div class="col-12 px-0">
                         <div class="row mx-0 align-items-center">
-                          <div class="col-auto heading fw-normal">Cafe Alatee</div>
-                          <div class="col fw-normal text-end subheading position-relative">$ 3.45</div>
+                          <div class="col-sm-auto heading fw-normal">Cafe Alatee</div>
+                          <div class="col-sm fw-normal text-sm-end subheading position-relative">$ 3.45</div>
                         </div>
                       </div>
                       <div class="hoverImg">
@@ -390,8 +397,8 @@
                     <div class="row mx-0">
                       <div class="col-12 px-0">
                         <div class="row mx-0 align-items-center">
-                          <div class="col-auto heading fw-normal">Cafe Alatee</div>
-                          <div class="col fw-normal text-end subheading position-relative">$ 3.45</div>
+                          <div class="col-sm-auto heading fw-normal">Cafe Alatee</div>
+                          <div class="col-sm fw-normal text-sm-end subheading position-relative">$ 3.45</div>
                         </div>
                       </div>
                       <div class="hoverImg">
@@ -413,8 +420,8 @@
                     <div class="row mx-0">
                       <div class="col-12 px-0">
                         <div class="row mx-0 align-items-center">
-                          <div class="col-auto heading fw-normal">Vienes Veal</div>
-                          <div class="col fw-normal text-end subheading position-relative">$ 3.45</div>
+                          <div class="col-sm-auto heading fw-normal">Vienes Veal</div>
+                          <div class="col-sm fw-normal text-sm-end subheading position-relative">$ 3.45</div>
                         </div>
                       </div>
                       <div class="hoverImg">
@@ -429,8 +436,8 @@
               </div>
             </div>
           </div>
-          <div class="col-6">
-            <div class="row mx-0 gap-5">
+          <div class="col-lg-6 col-12 ">
+            <div class="row mx-0 gap-sm-5 gap-3">
               <div class="col-12 px-0 offerItem position-relative">
                 <div class="row mx-0 align-items-center">
                   <div class="col-auto px-0">
@@ -440,8 +447,8 @@
                     <div class="row mx-0">
                       <div class="col-12 px-0">
                         <div class="row mx-0 align-items-center">
-                          <div class="col-auto heading fw-normal">Black Magic</div>
-                          <div class="col fw-normal text-end subheading position-relative">$ 2.45</div>
+                          <div class="col-sm-auto heading fw-normal">Black Magic</div>
+                          <div class="col-sm fw-normal text-sm-end subheading position-relative">$ 2.45</div>
                         </div>
                       </div>
                       <div class="hoverImg">
@@ -463,8 +470,8 @@
                     <div class="row mx-0">
                       <div class="col-12 px-0">
                         <div class="row mx-0 align-items-center">
-                          <div class="col-auto heading fw-normal">Brownies</div>
-                          <div class="col fw-normal text-end subheading position-relative">$ 7.45</div>
+                          <div class="col-sm-auto heading fw-normal">Brownies</div>
+                          <div class="col-sm fw-normal text-sm-end subheading position-relative">$ 7.45</div>
                         </div>
                       </div>
                       <div class="hoverImg">
@@ -486,8 +493,8 @@
                     <div class="row mx-0">
                       <div class="col-12 px-0">
                         <div class="row mx-0 align-items-center">
-                          <div class="col-auto heading fw-normal">Peanut veg</div>
-                          <div class="col fw-normal text-end subheading position-relative">$ 3.45</div>
+                          <div class="col-sm-auto heading fw-normal">Peanut veg</div>
+                          <div class="col-sm fw-normal text-sm-end subheading position-relative">$ 3.45</div>
                         </div>
                       </div>
                       <div class="hoverImg">
@@ -509,8 +516,8 @@
                     <div class="row mx-0">
                       <div class="col-12 px-0">
                         <div class="row mx-0 align-items-center">
-                          <div class="col-auto heading fw-normal">Cafe Alatee</div>
-                          <div class="col fw-normal text-end subheading position-relative">$ 2.45</div>
+                          <div class="col-sm-auto heading fw-normal">Cafe Alatee</div>
+                          <div class="col-sm fw-normal text-sm-end subheading position-relative">$ 2.45</div>
                         </div>
                       </div>
                       <div class="hoverImg">
@@ -532,8 +539,8 @@
                     <div class="row mx-0">
                       <div class="col-12 px-0">
                         <div class="row mx-0 align-items-center">
-                          <div class="col-auto heading fw-normal">Vienes Veal</div>
-                          <div class="col fw-normal text-end subheading position-relative">$ 3.45</div>
+                          <div class="col-sm-auto heading fw-normal">Vienes Veal</div>
+                          <div class="col-sm fw-normal text-sm-end subheading position-relative">$ 3.45</div>
                         </div>
                       </div>
                       <div class="hoverImg">
@@ -548,10 +555,12 @@
               </div>
             </div>
           </div>
-          <div class="col-auto mx-auto pt-5">
-            <a class="pq-button pq-button-flat" href="#">
-              <span class="pq-button-text position-relative ">View our Menu</span>
-            </a>
+          <div class="col-auto px-0 mx-auto  position-relative pt-lg-5 pt-md-3 pt-2">
+            <div class="pageButton d-inline-block">
+              <a href="#" class="text-decoration-none d-flex align-items-center justify-content-start position-relative">
+                <span>View Our Menu</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -562,10 +571,13 @@
 
 <!-- videosection start  -->
 
-<div class="videoSection video bg-dark py-3">
+<div class="videoSection video bg-dark position-relative">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12">
+      <div class="col-2 d-lg-block d-none">
+        <div class="frame img position-absolute"><img src="assets/img/Main-page/FRAME.svg" alt="frame" class="rounded-circle w-100 h-100"></div>
+      </div>
+      <div class="col-lg-10 col-12 videoSection">
         <div class="videoPlay">
           <a href="https://www.youtube.com/watch?v=ZqJZyxVdLZA&list=RDGMEM916WJxafRUGgOvd6dVJkeQ&index=7" class="text-decoration-none d-flex align-items-center justify-content-center"><img src="assets/img/Main-page/video.svg" alt="videoPlay" class="img-fluid w-100 h-100"></a>
         </div>
@@ -575,34 +587,36 @@
 </div>
 <!-- video end -->
  <!-- contactform start  -->
-<div class="container-fluid py-5 bg-black tableForm">
-  <div class="container py-5">
-    <div class="row py-5">
+<div class="container-fluid py-lg-5 py-md-4 py-3  bg-black tableForm">
+  <div class="container py-xl-5 py-lg-4">
+    <div class="row py-xl-4 py-lg-3">
       <div class="col-12 pb-4 pageHeading text-center">
         <div class="seuHeading">Make A Reserve</div>
         <div class="heading">Book A Table On Time</div>
       </div>
       <div class="col-12 formStyle">
         <div class="row mx-0 g-4">
-          <div class="col-6">
+          <div class="col-md-6">
             <input type="text" class="form-control bg-transparent shadow-none rounded-0" placeholder='Your Name' id="exampleInputName1" aria-describedby="textlHelp1">
           </div>
-          <div class="col-6">
+          <div class="col-md-6">
             <input type="text" class="form-control bg-transparent shadow-none rounded-0" placeholder="Your Phone" id="exampleInputName2" aria-describedby="emailHelp2">
           </div>
-          <div class="col-4">
+          <div class="col-md-4">
             <input type="text" class="form-control bg-transparent shadow-none rounded-0" placeholder="Persons" id="exampleInputName3" aria-describedby="emailHelp3">
           </div>
-          <div class="col-4">
+          <div class="col-md-4">
             <input type="date" class="form-control bg-transparent shadow-none rounded-0" id="exampleInputDate" aria-describedby="date">
           </div>
-          <div class="col-4">
+          <div class="col-md-4">
             <input type="text" class="form-control bg-transparent shadow-none rounded-0" placeholder="Time" id="exampleInputName2" aria-describedby="Time">
           </div>
-          <div class="col-auto mx-auto" >
-            <a href="#" class="text-decoration-none CommonBtn outlineBtn"> 
-              Read More
-            </a>
+          <div class="col-auto px-0  position-relative mx-auto">
+            <div class="pageButton d-inline-block">
+              <a href="#" class="text-decoration-none d-flex align-items-center justify-content-start position-relative">
+                <span>Book Table</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -612,7 +626,7 @@
 
   <!-- contactform end  -->
    <!-- portfolio end  -->
-<div class="container-fluid bg-black px-0 portfolio">
+<div class="container-fluid bg-black px-0 portfolio overflow-hidden">
   <div class="row">
     <div class="col-12">
       <div class="owl-carousel owl-theme portfolioOwl">
@@ -650,12 +664,12 @@
 </div>
  <!-- portfolio end  -->
  <!-- counter Start  -->
- <div class="container-fluid bg-black py-5 counter ">
+ <div class="container-fluid bg-black py-lg-5 py-md-4 py-3 counter ">
   <div class="container">
     <div class="row">
-      <div class="col-3">
-        <div class="row mx-0">
-          <div class="col-auto px-0 me-3">
+      <div class="col-lg-3 col-sm-6">
+        <div class="row mx-0 align-items-center">
+          <div class="col-auto px-0 me-3 counterImg">
             <img src="assets/img/Main-page/counter1.jpg" alt="counter" class="img-fluid w-100 h-100">
           </div>
           <div class="col px-0">
@@ -666,9 +680,9 @@
           </div>
         </div>
       </div>
-      <div class="col-3">
-        <div class="row mx-0">
-          <div class="col-auto px-0 me-3">
+      <div class="col-lg-3 col-sm-6">
+        <div class="row mx-0 align-items-center">
+          <div class="col-auto px-0 me-3 counterImg">
             <img src="assets/img/Main-page/counter2.jpg" alt="counter" class="img-fluid w-100 h-100">
           </div>
           <div class="col px-0">
@@ -679,10 +693,10 @@
           </div>
         </div>
       </div>
-      <div class="col-3">
-        <div class="row mx-0">
-          <div class="col-auto px-0 me-3">
-            <img src="assets/img/Main-page/counter3.jpg" alt="counter" class="img-fluid w-100 h-100">
+      <div class="col-lg-3 col-sm-6 ">
+        <div class="row mx-0 align-items-center">
+          <div class="col-auto px-0 me-3 counterImg">
+            <img src="assets/img/Main-page/counter2.jpg" alt="counter" class="img-fluid w-100 h-100">
           </div>
           <div class="col px-0">
             <div class="row mx-0">
@@ -692,9 +706,9 @@
           </div>
         </div>
       </div>
-      <div class="col-3">
-        <div class="row mx-0">
-          <div class="col-auto px-0 me-3">
+      <div class="col-lg-3 col-sm-6">
+        <div class="row mx-0 align-items-center">
+          <div class="col-auto px-0 me-3 counterImg">
             <img src="assets/img/Main-page/counter4.jpg" alt="counter" class="img-fluid w-100 h-100">
           </div>
           <div class="col px-0">
@@ -712,14 +726,14 @@
 
  <!-- team Start  -->
 
- <div class="container-fluid py-5  bg-dark teamsection ">
-  <div class="container py-5">
-    <div class="row py-2">
+ <div class="container-fluid py-lg-5 py-md-4 py-3  bg-dark teamsection ">
+  <div class="container py-xl-5 py-lg-4">
+    <div class="row py-lg-2">
       <div class="col-12 pb-4 pageHeading text-center">
-        <div class="seuHeading">From Our Menu</div>
-        <div class="heading">Try Our Daily Offers</div>
+        <div class="seuHeading">Team Of Restaurant</div>
+        <div class="heading">Meet Our Professionals</div>
       </div>
-      <div class="col-12 my-5">
+      <div class="col-12 my-xl-5 my-lg-4 ">
         <div class="row">
           <div class="owl-carousel owl-theme teamOwl">
             <div class="item">
@@ -733,7 +747,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="infoBox d-flex justify-content-center align-items-center flex-column pt-4">
+              <div class="infoBox d-flex justify-content-center align-items-center flex-column pt-sm-4 pt-2">
                 <div class="heading fw-normal">Alex john</div>
                 <div class="subheading">French Cuisine</div>
               </div>
@@ -749,7 +763,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="infoBox d-flex justify-content-center align-items-center flex-column pt-4">
+              <div class="infoBox d-flex justify-content-center align-items-center flex-column pt-sm-4 pt-2">
                 <div class="heading fw-normal">Danial Frankie</div>
                 <div class="subheading">chinese Cuisine</div>
               </div>
@@ -765,7 +779,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="infoBox d-flex justify-content-center align-items-center flex-column pt-4">
+              <div class="infoBox d-flex justify-content-center align-items-center flex-column pt-sm-4 pt-2">
                 <div class="heading fw-normal">Michal Smart</div>
                 <div class="subheading">Japanese Cuisine</div>
               </div>
@@ -781,7 +795,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="infoBox d-flex justify-content-center align-items-center flex-column pt-4">
+              <div class="infoBox d-flex justify-content-center align-items-center flex-column pt-sm-4 pt-2">
                 <div class="heading fw-normal">Michal Smart</div>
                 <div class="subheading">Japanese Cuisine</div>
               </div>
@@ -795,13 +809,13 @@
   <!-- team end  -->
 
    <!-- testimonal Start  -->
-  <div class="container-fluid py-5 testimonal">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-6">
+  <div class="container-fluid py-lg-5 py-md-4 py-3  testimonal ">
+    <div class="container py-xl-5 py-lg-4 py-2">
+      <div class="row align-items-center py-xl-5 py-lg-4 py-2">
+        <div class="col-lg-6">
           <div class="owl-carousel owl-theme testimonalBox">
             <div class="item">
-              <div class="testimonalSection p-5 bgdark d-flex align-items-center ">
+              <div class="testimonalSection p-md-5 p-3 bgdark d-flex align-items-center ">
                 <div class="row mx-0 gap-3">
                   <div class="col-12 testimonial-info">
                     <div class="row mx-0 align-items-center ">
@@ -816,8 +830,8 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col px-0 d-flex justify-content-end">
-                        <div class="qoute"><img src="assets/img/Main-page/Quote.svg" alt="qoute" class="img-fluid w-100 h-100"> </div>
+                      <div class="col px-0 d-flex justify-content-end d-sm-block d-none">
+                        <div class="qoute ms-auto"><img src="assets/img/Main-page/Quote.svg" alt="qoute" class="img-fluid w-100 h-100"> </div>
                       </div>
                     </div>
                   </div>
@@ -829,17 +843,17 @@
                   </div>
                   <div class="col-12 rating">
                     <ul class="list-unstyled d-flex align-items-center gap-1">
-                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
-                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
-                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
-                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center icon"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center icon"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center icon"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center icon"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
             <div class="item">
-              <div class="testimonalSection p-5 bg-dark d-flex align-items-center ">
+              <div class="testimonalSection p-md-5 p-3 bgdark d-flex align-items-center ">
                 <div class="row mx-0 gap-3">
                   <div class="col-12 testimonial-info">
                     <div class="row mx-0 align-items-center ">
@@ -854,8 +868,8 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col px-0 d-flex justify-content-end">
-                        <div class="qoute"><img src="assets/img/Main-page/Quote.svg" alt="qoute" class="img-fluid w-100 h-100"> </div>
+                      <div class="col px-0 d-flex justify-content-end d-sm-block d-none">
+                        <div class="qoute ms-auto"><img src="assets/img/Main-page/Quote.svg" alt="qoute" class="img-fluid w-100 h-100"> </div>
                       </div>
                     </div>
                   </div>
@@ -867,17 +881,17 @@
                   </div>
                   <div class="col-12 rating">
                     <ul class="list-unstyled d-flex align-items-center gap-1">
-                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
-                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
-                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
-                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center icon"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center icon"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center icon"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center icon"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
             <div class="item">
-              <div class="testimonalSection p-5 bg-dark d-flex align-items-center ">
+              <div class="testimonalSection p-md-5 p-3 bgdark d-flex align-items-center ">
                 <div class="row mx-0 gap-3">
                   <div class="col-12 testimonial-info">
                     <div class="row mx-0 align-items-center ">
@@ -892,8 +906,8 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col px-0 d-flex justify-content-end">
-                        <div class="qoute"><img src="assets/img/Main-page/Quote.svg" alt="qoute" class="img-fluid w-100 h-100"> </div>
+                      <div class="col px-0 d-flex justify-content-end d-sm-block d-none">
+                        <div class="qoute ms-auto"><img src="assets/img/Main-page/Quote.svg" alt="qoute" class="img-fluid w-100 h-100"> </div>
                       </div>
                     </div>
                   </div>
@@ -905,10 +919,10 @@
                   </div>
                   <div class="col-12 rating">
                     <ul class="list-unstyled d-flex align-items-center gap-1">
-                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
-                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
-                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
-                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center icon"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center icon"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center icon"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center justify-content-center icon"><img src="assets/img/Main-page/Star.svg" alt="rating" class="img-fluid w-100 h-100"></a></li>
                     </ul>
                   </div>
                 </div>
@@ -916,106 +930,115 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-6"></div>
       </div>
     </div>
   </div>
    <!-- testimonal end  -->
 
 <!--  blog start  -->
-<div class="container-fluid py-5 bg-dark blogSection">
-  <div class="container">
-    <div class="row">
-      <div class="col-4">
-        <div class="card blogCard rounded-0 bg-black overflow-hidden h-100">
-          <div class="row mx-0">
-            <div class="col-12 px-0">
-              <div class="cardImg overflow-hidden positionrelative">
-                  <img src="assets/img/Main-page/blog1.jpg" class="card-img-top img-fluid w-100 h-100 object-fit-cover overflow-hidden" alt="blog">
-              </div>
-                <div class="date position-absolute py-2"><a href="#" class="text-decoration-none fw-medium px-4 py-3">April 18, 2022</a></div>
-            </div>
-          </div>
-          <div class="card-body overflow-hidden">
-            <div class="row mx-0">
-              <div class="col-12 px-0 blogMeta">
-                <ul class="list-unstyled d-flex align-items-center gap-3">
-                  <li><a href="#" class="text-decoration-none d-flex align-items-center subheading"><span class="d-inline-flex icon me-2"><img src="assets/img/Main-page/Person.svg" alt="blog" class="img-fluid w-100 h-100"></span> Admin</a></li>
-                  <li><a href="#" class="text-decoration-none d-flex align-items-center subheading"><span class="d-inline-flex icon me-2"><img src="assets/img/Main-page/tag.svg" alt="blog" class="img-fluid w-100 h-100"></span> Food</a></li>
-                </ul>
-              </div>
-              <div class="col-12 px-0 fw-normal blogTitle">
-                Cooking Dining Experience
-              </div>
-              <div class="blogPera col-12 px-0 mb-4">
-                Contrary to popular belief, Lorem Ipsum is not simply random text.
-              </div>
-              <hr class="border border-white">
-              <div class="col-auto px-0 cardButton position-relative">
-                <a href="#" class="text-decoration-none d-flex align-items-center">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
+<div class="container-fluid py-lg-5 py-md-4 py-3 bg-dark blogSection">
+  <div class="container py-xl-5 py-lg-4">
+    <div class="row gap-lg-0 gap-md-4 gap-3 py-lg-2">
+      <div class="col-12 pb-4 pageHeading text-center">
+        <div class="seuHeading">Our Blog</div>
+        <div class="heading">Be First Who Read News</div>
       </div>
-      <div class="col-4">
-        <div class="card blogCard rounded-0 bg-black overflow-hidden h-100">
-          <div class="card-body overflow-hidden">
-            <div class="row mx-0">
-              <div class="col-12 px-0 blogMeta">
-                <ul class="list-unstyled d-flex align-items-center gap-3">
-                  <li><a href="#" class="text-decoration-none d-flex align-items-center subheading"><span class="d-inline-flex icon me-2"><img src="assets/img/Main-page/Person.svg" alt="blog" class="img-fluid w-100 h-100"></span> Admin</a></li>
-                  <li><a href="#" class="text-decoration-none d-flex align-items-center subheading"><span class="d-inline-flex icon me-2"><img src="assets/img/Main-page/tag.svg" alt="blog" class="img-fluid w-100 h-100"></span> Food</a></li>
-                </ul>
+      <div class="col-12">
+        <div class="row mx-0">
+          <div class="col-lg-4">
+            <div class="card blogCard border-0 rounded-0 bg-black overflow-hidden h-100">
+              <div class="row mx-0">
+                <div class="col-12 px-0">
+                  <div class="cardImg overflow-hidden positionrelative">
+                      <img src="assets/img/Main-page/blog1.jpg" class="card-img-top img-fluid w-100 h-100 object-fit-cover overflow-hidden" alt="blog">
+                  </div>
+                    <div class="date position-absolute py-2"><a href="#" class="text-decoration-none fw-medium px-4 py-3">April 18, 2022</a></div>
+                </div>
               </div>
-              <div class="col-12 px-0 fw-normal blogTitle">
-                Spaghetti With Rock Shrimp
-              </div>
-              <div class="blogPera col-12 px-0 mb-4">
-                Contrary to popular belief, Lorem Ipsum is not simply random text.
-              </div>
-              <hr class="border border-white">
-              <div class="col-auto px-0 cardButton position-relative">
-                <a href="#" class="text-decoration-none d-flex align-items-center">Read More</a>
+              <div class="card-body overflow-hidden">
+                <div class="row mx-0">
+                  <div class="col-12 px-0 blogMeta">
+                    <ul class="list-unstyled d-flex align-items-center gap-3 ">
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center subheading"><span class="d-inline-flex icon me-2"><img src="assets/img/Main-page/Person.svg" alt="blog" class="img-fluid w-100 h-100"></span> Admin</a></li>
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center subheading"><span class="d-inline-flex icon me-2"><img src="assets/img/Main-page/tag.svg" alt="blog" class="img-fluid w-100 h-100"></span> Food</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-12 px-0 fw-normal blogTitle">
+                    Cooking Dining Experience
+                  </div>
+                  <div class="blogPera col-12 px-0 mb-4">
+                    Contrary to popular belief, Lorem Ipsum is not simply random text.
+                  </div>
+                  <hr class="border border-white">
+                  <div class="col-auto px-0 cardButton position-relative">
+                    <a href="#" class="text-decoration-none d-flex align-items-center">Read More</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="row mx-0">
-            <div class="col-12 px-0 position-relative">
-              <div class="cardImg overflow-hidden ">
-                  <img src="assets/img/Main-page/blog2.jpg" class="card-img-top img-fluid w-100 h-100 object-fit-cover overflow-hidden" alt="blog">
+          <div class="col-lg-4">
+            <div class="card blogCard border-0 rounded-0 bg-black overflow-hidden h-100">
+              <div class="card-body overflow-hidden">
+                <div class="row mx-0">
+                  <div class="col-12 px-0 blogMeta">
+                    <ul class="list-unstyled d-flex align-items-center gap-3">
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center subheading"><span class="d-inline-flex icon me-2"><img src="assets/img/Main-page/Person.svg" alt="blog" class="img-fluid w-100 h-100"></span> Admin</a></li>
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center subheading"><span class="d-inline-flex icon me-2"><img src="assets/img/Main-page/tag.svg" alt="blog" class="img-fluid w-100 h-100"></span> Food</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-12 px-0 fw-normal blogTitle">
+                    Spaghetti With Rock Shrimp
+                  </div>
+                  <div class="blogPera col-12 px-0 mb-4">
+                    Contrary to popular belief, Lorem Ipsum is not simply random text.
+                  </div>
+                  <hr class="border border-white">
+                  <div class="col-auto px-0 cardButton position-relative">
+                    <a href="#" class="text-decoration-none d-flex align-items-center">Read More</a>
+                  </div>
+                </div>
               </div>
-                <div class="date position-absolute py-2"><a href="#" class="text-decoration-none fw-medium px-4 py-3">April 18, 2022</a></div>
+              <div class="row mx-0">
+                <div class="col-12 px-0 position-relative">
+                  <div class="cardImg overflow-hidden ">
+                      <img src="assets/img/Main-page/blog2.jpg" class="card-img-top img-fluid w-100 h-100 object-fit-cover overflow-hidden" alt="blog">
+                  </div>
+                    <div class="date position-absolute py-2"><a href="#" class="text-decoration-none fw-medium px-4 py-3">April 18, 2022</a></div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card blogCard rounded-0 bg-black overflow-hidden h-100">
-          <div class="row mx-0">
-            <div class="col-12 px-0">
-              <div class="cardImg overflow-hidden positionrelative">
-                  <img src="assets/img/Main-page/blog1.jpg" class="card-img-top img-fluid w-100 h-100 object-fit-cover overflow-hidden" alt="blog">
+          <div class="col-lg-4">
+            <div class="card blogCard border-0 rounded-0 bg-black overflow-hidden h-100">
+              <div class="row mx-0">
+                <div class="col-12 px-0">
+                  <div class="cardImg overflow-hidden positionrelative">
+                      <img src="assets/img/Main-page/blog1.jpg" class="card-img-top img-fluid w-100 h-100 object-fit-cover overflow-hidden" alt="blog">
+                  </div>
+                    <div class="date position-absolute py-2"><a href="#" class="text-decoration-none fw-medium px-4 py-3">April 18, 2022</a></div>
+                </div>
               </div>
-                <div class="date position-absolute py-2"><a href="#" class="text-decoration-none fw-medium px-4 py-3">April 18, 2022</a></div>
-            </div>
-          </div>
-          <div class="card-body overflow-hidden">
-            <div class="row mx-0">
-              <div class="col-12 px-0 blogMeta">
-                <ul class="list-unstyled d-flex align-items-center gap-3">
-                  <li><a href="#" class="text-decoration-none d-flex align-items-center subheading"><span class="d-inline-flex icon me-2"><img src="assets/img/Main-page/Person.svg" alt="blog" class="img-fluid w-100 h-100"></span> Admin</a></li>
-                  <li><a href="#" class="text-decoration-none d-flex align-items-center subheading"><span class="d-inline-flex icon me-2"><img src="assets/img/Main-page/tag.svg" alt="blog" class="img-fluid w-100 h-100"></span> Food</a></li>
-                </ul>
-              </div>
-              <div class="col-12 px-0 fw-normal blogTitle">
-                Cooking Dining Experience
-              </div>
-              <div class="blogPera col-12 px-0 mb-4">
-                Contrary to popular belief, Lorem Ipsum is not simply random text.
-              </div>
-              <hr class="border border-white">
-              <div class="col-auto px-0 cardButton position-relative">
-                <a href="#" class="text-decoration-none d-flex align-items-center">Read More</a>
+              <div class="card-body overflow-hidden">
+                <div class="row mx-0">
+                  <div class="col-12 px-0 blogMeta">
+                    <ul class="list-unstyled d-flex align-items-center gap-3">
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center subheading"><span class="d-inline-flex icon me-2"><img src="assets/img/Main-page/Person.svg" alt="blog" class="img-fluid w-100 h-100"></span> Admin</a></li>
+                      <li><a href="#" class="text-decoration-none d-flex align-items-center subheading"><span class="d-inline-flex icon me-2"><img src="assets/img/Main-page/tag.svg" alt="blog" class="img-fluid w-100 h-100"></span> Food</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-12 px-0 fw-normal blogTitle">
+                    Cooking Dining Experience
+                  </div>
+                  <div class="blogPera col-12 px-0 mb-4">
+                    Contrary to popular belief, Lorem Ipsum is not simply random text.
+                  </div>
+                  <hr class="border border-white">
+                  <div class="col-auto px-0 cardButton position-relative">
+                    <a href="#" class="text-decoration-none d-flex align-items-center">Read More</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1027,11 +1050,11 @@
 <!-- blog-end  -->
 
  <!-- footer start  -->
-<footer class="container-fluid bg-black py-5 footer">
+<footer class="container-fluid bg-black py-lg-5 py-md-4 py-3 footer">
   <div class="container">
-    <div class="row">
-      <div class="col-4">
-        <div class="row mx-0 gap-3">
+    <div class="row g-lg-0 g-3">
+      <div class="col-lg-4 col-md-6">
+        <div class="row mx-0 gap-md-3 gap-2">
           <div class="col-12 px-0">
             <a href="#" class="text-decoration-none d-flex footerLogo"><img src="assets/img/Navbar/logo.svg" alt="logo" class="img-fluid w-100 h-100"></a>
           </div>
@@ -1045,7 +1068,7 @@
             </div>
           </div>
           <div class="col-12 px-0 socialIcon">
-              <ul class="list-unstyled d-flex align-items-center justify-content-start gap-5">
+              <ul class="list-unstyled d-flex align-items-center justify-content-start gap-md-5 gap-4">
                 <li><a href="#" class="d-flex align-items-center justify-content-center icon"><img src="assets/img/Navbar/facebook.svg" alt="facebook" class="img-fluid w-100 h-100"></a></li>
                 <li><a href="#" class="d-flex align-items-center justify-content-center icon"><img src="assets/img/Navbar/instagram.svg" alt="facebook" class="img-fluid w-100 h-100"></a></li>
                 <li><a href="#" class="d-flex align-items-center justify-content-center icon"><img src="assets/img/Navbar/twitter.svg" alt="facebook" class="img-fluid w-100 h-100"></a></li>
@@ -1054,10 +1077,10 @@
           </div>
         </div>
       </div>
-      <div class="col-4 footerLink">
-        <div class="row mx-0 gap-3">
-          <div class="col-12 fw-medium heading">Hours</div>
-          <div class="col-12 footerMenu">
+      <div class="col-lg-4 col-md-6 footerLink ps-md-4">
+        <div class="row mx-0 gap-md-3 gap-2">
+          <div class="col-12 px-0 fw-medium heading">Hours</div>
+          <div class="col-12 px-0 footerMenu">
             <ul class="list-unstyled">
               <li>
                 <a href="#" class="text-decoration-none d-flex align-items-center w-100">
@@ -1123,10 +1146,10 @@
           </div>
         </div>
       </div>
-      <div class="col-4 footerLink">
-        <div class="row mx-0 gap-3">
-          <div class="col-12 fw-medium heading">Hours</div>
-          <div class="col-12">
+      <div class="col-lg-4  footerLink">
+        <div class="row mx-0 gap-md-3 gap-2">
+          <div class="col-12 px-0 fw-medium heading">Hours</div>
+          <div class="col-12 px-0">
             <div class="row mx-0 gap-3">
               <div class="col-12 px-0  ">
                 <a href="#" class="text-decoration-none d-flex align-items-center">
@@ -1174,15 +1197,16 @@
 </footer>
  <!-- footer end  -->
 <!-- copyright  -->
-<div class="container-fluid py-3 copyRight">
+<div class="container-fluid pb-3     bg-black copyRight">
   <div class="container">
     <div class="row">
-      <div class="col-12 d-flex align-items-center py-md-0 py-2">
-        <div class="copy-right text text-white fw-normal">Copyright <span>©</span>2023 All rights reserved </div>
+      <div class="col-12 d-flex align-items-center justify-content-center py-md-0 py-2">
+        <div class="copy-right text-center text-white fw-normal ">Copyright <span>©</span>2023 All rights reserved </div>
       </div>
     </div>
   </div>
 </div>
+
     <!-- Bootstrap Js -->
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Custom Js -->
@@ -1220,7 +1244,7 @@ owl.owlCarousel({
     loop:true,
     margin:0,
     nav:false,
-    autoplay:true,
+    autoplay:false,
     autoplayTimeout:4000,
     autoplayHoverPause:false
     
@@ -1232,12 +1256,15 @@ owl.owlCarousel({
   $('.portfolioOwl').owlCarousel({
     loop:true,
     margin:0,
-    nav:true,
+    nav:false,
     responsive:{
         0:{
             items:1
         },
         600:{
+            items:2
+        },
+        800:{
             items:3
         },
         1000:{
@@ -1259,8 +1286,9 @@ owl.owlCarousel({
             items:1
         },
         600:{
-            items:3
+            items:2
         },
+   
         1000:{
             items:3
         }
@@ -1279,7 +1307,7 @@ owl.owlCarousel({
             items:1
         },
         600:{
-            items:3
+            items:1
         },
         1000:{
             items:1
@@ -1287,6 +1315,19 @@ owl.owlCarousel({
     }
 })
 </script>
+
+<!-- search  -->
+
+
+<script>
+  let searchForm = document.querySelector('.search-form');
+
+    document.querySelector('#search-btn').onclick = () =>{
+    searchForm.classList.toggle('active');
+    navbar.classList.remove('active');
+    }
+</script>
+
 <!-- aos  -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>

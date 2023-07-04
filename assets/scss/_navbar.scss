@@ -64,8 +64,9 @@ header{
         }
     }
     & .bottomHeader{
-        min-height: 70px;
+        min-height: 60px;
         & .navbar{
+            min-height: 55px;
             & .logo{
                 height: 50px;
                 width: 203px;
@@ -148,13 +149,48 @@ header{
                         }
                     }
                 }
-                & .icon{
-                    width: 24px;
-                    height: 24px;
-                }
+             
+            }
+            & .icon{
+                width: 24px;
+                height: 24px;
             }
         }
+        & .search-form{
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.2s;
+            position: absolute;
+            width: 350px;
+            height: 80px;
+            border: 1px solid $theme1;
+            right: 23%;
+            margin-top: 6px;
+            padding: 15px;
+            background-color: rgba($black, 0.9);
+            & input{
+                // width: 100%;
+                // height: 100%;
+                border: 1px solid $white;
+                &::placeholder{
+                    font-size: 14px;
+                    color: $white;
+                  
+                }
+                & .icon{
+                    width: 45px;
+                    height: 49px;
+                }
+                
+            }
+            &.active{
+                visibility: visible;
+                opacity: 1;
+            }
+
+        }
     }
+
 }
 .fixed-navbar {
     position: fixed;
@@ -171,4 +207,488 @@ header{
     to {
         top: 0;
     }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin header-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin header-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin header-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin header-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin header-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin header-mixin-max-xl() {
+    header{
+        & .topHeader{
+       
+            & .headerContact{
+                & ul{
+                    & li{
+                        & a{
+                      
+                            &:hover{
+                            
+                            }
+                        }
+                    }
+                }
+            }
+            & .socialIcon{
+                & ul{
+                    & li{
+                        & a{
+                   
+                            &::after{
+                           
+                            }
+                            &:hover{
+                               
+                            }
+                        }
+                    }
+                }
+              
+            }
+        }
+        & .bottomHeader{
+     
+            & .navbar{
+                & .logo{
+             
+                }
+                & .navOffcanvas{
+                    & .offcanvas-header{
+    
+                    }
+                    & .offcanvas-body{
+                        & .navbar-nav {
+                            & .nav-item{
+                       
+                                & ul{
+                               
+                                    & li{
+                                        & a{
+                                            &::before{
+                                                
+                                            }
+                                            &:hover{
+                                           
+                                            
+                                                &::before{
+                                                   
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                    & ul{
+                                   
+                                    }
+                                }
+                                & .nav-link{
+                                   
+                                    &:hover{
+                                    
+                                        &::after{
+                                           
+                                        }
+                                    }
+                                    &::after{
+                             
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .icon{
+                    
+                    }
+                }
+            }
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin header-mixin-max-lg() {
+    header{
+        & .topHeader{
+       
+            & .headerContact{
+                & ul{
+                    & li{
+                        & a{
+                      
+                            &:hover{
+                            
+                            }
+                        }
+                    }
+                }
+            }
+            & .socialIcon{
+                & ul{
+                    & li{
+                        & a{
+                   
+                            &::after{
+                           
+                            }
+                            &:hover{
+                               
+                            }
+                        }
+                    }
+                }
+              
+            }
+        }
+        & .bottomHeader{
+     
+            & .navbar{
+                & .logo{
+             
+                }
+                & .navOffcanvas{
+                    & .offcanvas-header{
+    
+                    }
+                    & .offcanvas-body{
+                        & .navbar-nav {
+                            & .nav-item{
+                       
+                                & ul{
+                               
+                                    & li{
+                                        & a{
+                                            &::before{
+                                                
+                                            }
+                                            &:hover{
+                                           
+                                            
+                                                &::before{
+                                                   
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                    & ul{
+                                   
+                                    }
+                                }
+                                & .nav-link{
+                                   
+                                    &:hover{
+                                    
+                                        &::after{
+                                           
+                                        }
+                                    }
+                                    &::after{
+                             
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .icon{
+                    
+                    }
+                }
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin header-mixin-max-md() {
+    header{
+        & .topHeader{
+       
+            & .headerContact{
+                & ul{
+                    & li{
+                        & a{
+                      
+                            &:hover{
+                            
+                            }
+                        }
+                    }
+                }
+            }
+            & .socialIcon{
+                & ul{
+                    & li{
+                        & a{
+                   
+                            &::after{
+                           
+                            }
+                            &:hover{
+                               
+                            }
+                        }
+                    }
+                }
+              
+            }
+        }
+        & .bottomHeader{
+     
+            & .navbar{
+                & .logo{
+                    height: 37px;
+                    width: 148px;
+                }
+                & .navOffcanvas{
+                    width: 280px;
+                    background-color: rgba($black ,0.9) !important;
+                    & .offcanvas-header{
+    
+                    }
+                    & .offcanvas-body{
+                        & .navbar-nav {
+                            & .nav-item{
+                       
+                                & ul{
+                               
+                                    & li{
+                                        & a{
+                                            &::before{
+                                                
+                                            }
+                                            &:hover{
+                                           
+                                            
+                                                &::before{
+                                                   
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                    & ul{
+                                   
+                                    }
+                                }
+                                & .nav-link{
+                                   
+                                    &:hover{
+                                    
+                                        &::after{
+                                           
+                                        }
+                                    }
+                                    &::after{
+                             
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .icon{
+                    
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin header-mixin-max-sm() {
+    header{
+        & .topHeader{
+       
+            & .headerContact{
+                & ul{
+                    & li{
+                        & a{
+                      
+                            &:hover{
+                            
+                            }
+                        }
+                    }
+                }
+            }
+            & .socialIcon{
+                & ul{
+                    & li{
+                        & a{
+                   
+                            &::after{
+                           
+                            }
+                            &:hover{
+                               
+                            }
+                        }
+                    }
+                }
+              
+            }
+        }
+        & .bottomHeader{
+            min-height: 55px;
+            & .navbar{
+                & .logo{
+             
+                }
+                & .navOffcanvas{
+                    & .offcanvas-header{
+    
+                    }
+                    & .offcanvas-body{
+                        & .navbar-nav {
+                            & .nav-item{
+                       
+                                & ul{
+                               
+                                    & li{
+                                        & a{
+                                            font-size: 14px;
+                                            line-height: 22px;
+
+                                            &::before{
+                                                
+                                            }
+                                            &:hover{
+                                           
+                                            
+                                                &::before{
+                                                   
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                    & ul{
+                                   
+                                    }
+                                }
+                                & .nav-link{
+                                   
+                                    &:hover{
+                                    
+                                        &::after{
+                                           
+                                        }
+                                    }
+                                    &::after{
+                             
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .icon{
+                    
+                    }
+                }
+            }
+        }
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin header-mixin-max-xs() {
+    header{
+        & .topHeader{
+       
+            & .headerContact{
+                & ul{
+                    & li{
+                        & a{
+                      
+                            &:hover{
+                            
+                            }
+                        }
+                    }
+                }
+            }
+            & .socialIcon{
+                & ul{
+                    & li{
+                        & a{
+                   
+                            &::after{
+                           
+                            }
+                            &:hover{
+                               
+                            }
+                        }
+                    }
+                }
+              
+            }
+        }
+        & .bottomHeader{
+     
+            & .navbar{
+                & .logo{
+             
+                }
+                & .navOffcanvas{
+                    & .offcanvas-header{
+    
+                    }
+                    & .offcanvas-body{
+                        & .navbar-nav {
+                            & .nav-item{
+                       
+                                & ul{
+                               
+                                    & li{
+                                        & a{
+                                            &::before{
+                                                
+                                            }
+                                            &:hover{
+                                           
+                                            
+                                                &::before{
+                                                   
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                    & ul{
+                                   
+                                    }
+                                }
+                                & .nav-link{
+                                   
+                                    &:hover{
+                                    
+                                        &::after{
+                                           
+                                        }
+                                    }
+                                    &::after{
+                             
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .icon{
+                    
+                    }
+                }
+            }
+        }
+    }
+    
 }

@@ -3,59 +3,261 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-    // @include navbar-mixin-min-sm();
+    @include header-mixin-min-sm();
+    @include heroSection-mixin-min-sm();
+    @include pageButton-mixin-min-sm();
+    @include aboutUs-mixin-min-sm();
+    @include pageHeading-mixin-min-sm();
+    @include service-mixin-min-sm();
+    @include dailyOffers-mixin-min-sm();
+    @include videoSection-mixin-min-sm();
+    @include tableForm-mixin-min-sm();
+    @include portfolio-mixin-min-sm();
+    @include counter-mixin-min-sm();
+    @include teamsection-mixin-min-sm();
+    @include testimonal-mixin-min-sm();
+    @include blogSection-mixin-min-sm();
+    @include footer-mixin-min-sm();
+
+
+
+
+
+
+
+
+
 
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  // @include navbar-mixin-min-md();
+  @include header-mixin-min-md();
+  @include heroSection-mixin-min-md();
+  @include pageButton-mixin-min-md();
+  @include aboutUs-mixin-min-md();
+  @include pageHeading-mixin-min-md();
+  @include service-mixin-min-md();
+  @include dailyOffers-mixin-min-md();
+  @include videoSection-mixin-min-md();
+  @include tableForm-mixin-min-md();
+  @include portfolio-mixin-min-md();
+  @include counter-mixin-min-md();
+  @include teamsection-mixin-min-md();
+  @include testimonal-mixin-min-md();
+  @include blogSection-mixin-min-md();
+  @include footer-mixin-min-md();
+
+
+
+
+
+
+
 
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  // @include navbar-mixin-min-lg();
+  @include header-mixin-min-lg();
+  @include heroSection-mixin-min-lg();
+  @include pageButton-mixin-min-lg();
+  @include aboutUs-mixin-min-lg();
+  @include pageHeading-mixin-min-lg();
+  @include service-mixin-min-lg();
+  @include dailyOffers-mixin-min-lg();
+  @include videoSection-mixin-min-lg();
+  @include tableForm-mixin-min-lg();
+  @include portfolio-mixin-min-lg();
+  @include counter-mixin-min-lg();
+  @include teamsection-mixin-min-lg();
+  @include testimonal-mixin-min-lg();
+  @include blogSection-mixin-min-lg();
+  @include footer-mixin-min-lg();
+
+
+
+
+
+
+
+
 
 
 }
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  // @include navbar-mixin-min-xl();
+  @include header-mixin-min-xl();
+  @include heroSection-mixin-min-xl();
+  @include pageButton-mixin-min-xl();
+  @include aboutUs-mixin-min-xl();
+  @include pageHeading-mixin-min-xl();
+  @include service-mixin-min-xl();
+  @include dailyOffers-mixin-min-xl();
+  @include videoSection-mixin-min-xl();
+  @include tableForm-mixin-min-xl();
+  @include portfolio-mixin-min-xl();
+  @include counter-mixin-min-xl();
+  @include teamsection-mixin-min-xl();
+  @include testimonal-mixin-min-xl();
+  @include blogSection-mixin-min-xl();
+  @include footer-mixin-min-xl();
+
+
+
+
+
+
+  
+
 
 
 }
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
-  // @include navbar-mixin-min-xxl();
+  @include heroSection-mixin-min-xxl();
+  @include header-mixin-min-xxl();
+  @include pageButton-mixin-min-xxl();
+  @include aboutUs-mixin-min-xxl();
+  @include pageHeading-mixin-min-xxl();
+  @include service-mixin-min-xxl();
+  @include dailyOffers-mixin-min-xxl();
+  @include videoSection-mixin-min-xxl();
+  @include tableForm-mixin-min-xxl();
+  @include portfolio-mixin-min-xxl();
+  @include counter-mixin-min-xxl();
+  @include teamsection-mixin-min-xxl();
+  @include testimonal-mixin-min-xxl();
+  @include blogSection-mixin-min-xxl();
+  @include footer-mixin-min-xxl();
+
+
+
+
+  
+
+
+
 
 }
 
 // X-Large devices (large desktops, less than 1400px)
 @media (max-width: 1399.98px) {
-  // @include navbar-mixin-max-xl();
+  @include header-mixin-max-xl();
+  @include heroSection-mixin-max-xl();
+  @include pageButton-mixin-max-xl();
+  @include aboutUs-mixin-max-xl();
+  @include pageHeading-mixin-max-xl();
+  @include service-mixin-max-xl();
+  @include dailyOffers-mixin-max-xl();
+  @include videoSection-mixin-max-xl();
+  @include videoSection-mixin-max-xl();
+  @include tableForm-mixin-max-xl();
+  @include portfolio-mixin-max-xl();
+  @include counter-mixin-max-xl();
+  @include teamsection-mixin-max-xl();
+  @include testimonal-mixin-max-xl();
+  @include blogSection-mixin-max-xl();
+  @include footer-mixin-max-xl();
+
+
+
+
+
+
+
+
+
 
 
 }
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
-  // @include navbar-mixin-max-lg(); 
+  @include header-mixin-max-lg(); 
+  @include heroSection-mixin-max-lg(); 
+  @include pageButton-mixin-max-lg();
+  @include aboutUs-mixin-max-lg(); 
+  @include pageHeading-mixin-max-lg(); 
+  @include service-mixin-max-lg(); 
+  @include dailyOffers-mixin-max-lg(); 
+  @include videoSection-mixin-max-lg(); 
+  @include tableForm-mixin-max-lg(); 
+  @include portfolio-mixin-max-lg(); 
+  @include counter-mixin-max-lg(); 
+  @include teamsection-mixin-max-lg(); 
+  @include testimonal-mixin-max-lg(); 
+  @include blogSection-mixin-max-lg(); 
+  @include footer-mixin-max-lg(); 
+
+
+
+
+
+
+  
+
 
 
 }
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
-  // @include navbar-mixin-max-md();
+  @include header-mixin-max-md();
+  @include heroSection-mixin-max-md();
+  @include pageButton-mixin-max-md();
+  @include aboutUs-mixin-max-md();
+  @include pageHeading-mixin-max-md();
+  @include service-mixin-max-md();
+  @include dailyOffers-mixin-max-md();
+  @include videoSection-mixin-max-md();
+  @include videoSection-mixin-max-md();
+  @include tableForm-mixin-max-md();
+  @include portfolio-mixin-max-md();
+  @include counter-mixin-max-md();
+  @include teamsection-mixin-max-md();
+  @include testimonal-mixin-max-md();
+  @include blogSection-mixin-max-md();
+  @include footer-mixin-max-md();
+
+
+
+
+
+
+
+
+
 
 }
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
-  // @include navbar-mixin-max-sm();
+  @include header-mixin-max-sm();
+  @include heroSection-mixin-max-sm();
+  @include pageButton-mixin-max-sm();
+  @include aboutUs-mixin-max-sm();
+  @include pageHeading-mixin-max-sm();
+  @include service-mixin-max-sm();
+  @include dailyOffers-mixin-max-sm();
+  @include videoSection-mixin-max-sm();
+  @include tableForm-mixin-max-sm();
+  @include portfolio-mixin-max-sm();
+  @include counter-mixin-max-sm();
+  @include teamsection-mixin-max-sm();
+  @include testimonal-mixin-max-sm();
+  @include blogSection-mixin-max-sm();
+  @include footer-mixin-max-sm();
+
+
+
+
+
+
+  
+
 
 
 
@@ -63,7 +265,29 @@
 
 // X-Small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
-  // @include navbar-mixin-max-xs();
+  @include header-mixin-max-xs();
+  @include heroSection-mixin-max-xs();
+  @include pageButton-mixin-max-xs();
+  @include aboutUs-mixin-max-xs();
+  @include pageHeading-mixin-max-xs();
+  @include service-mixin-max-xs();
+  @include dailyOffers-mixin-max-xs();
+  @include videoSection-mixin-max-xs();
+  @include tableForm-mixin-max-xs();
+  @include portfolio-mixin-max-xs();
+  @include counter-mixin-max-xs();
+  @include teamsection-mixin-max-xs();
+  @include testimonal-mixin-max-xs();
+  @include blogSection-mixin-max-xs();
+  @include footer-mixin-max-xs();
+
+
+
+
+
+
+
+
 
 }
 

@@ -1,6 +1,7 @@
 // heroSection
 .heroSection{
     height: 100vh;
+    transform: translate(0, 0);
    & .heroOwl{
     & .owl-stage-outer{
         height: 100%;
@@ -17,6 +18,15 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    &.active{
+                        & .heroConternt{
+                            animation-name: fade-in;
+                            animation-duration: 2s;
+                            animation-delay: 2s;
+                            animation-fill-mode: both;
+                        }
+                    }
+                
                     &.item2{
                         background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('../img/Main-page/hero1.jpeg') !important;
                         height:100%;
@@ -26,6 +36,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                    
                     }
                     &.item3{
                         background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('../img/Main-page/hero2.jpeg') !important;
@@ -36,10 +47,11 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                     
                     }
 
                     & .heroConternt{
-                        animation:fadeInUp 1.2s ease backwards;
+                      
                         & .subheading{
                             font-size: 16px;
                             line-height: 24px;
@@ -48,6 +60,8 @@
                         }
                         & .heading{
                             font-family: 'Josefin Sans';
+                         
+
                             font-size: 62px;
                             line-height: 72px;
                             color: $white;
@@ -58,16 +72,7 @@
                             color: $theme2;
                         }
                     }
-                    @keyframes fadeInUp{
-                        0%{
-                            transform:translate(0px, 200px);
-                             opacity: 1;
-                        }
-                        100%{
-                            transform:translate(0px, 0);
-                             opacity: 1;
-                        }
-                    }
+                   
                 }
             }
         }
@@ -92,10 +97,312 @@
         }
     }
    }
+   @keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
    
 
 }
 
+
+// Small devices (landscape phones, 576px and up)
+@mixin heroSection-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin heroSection-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin heroSection-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin heroSection-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin heroSection-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin heroSection-mixin-max-xl() {
+    .heroSection{
+      
+       & .heroOwl{
+        & .owl-stage-outer{
+       
+            & .owl-stage{
+      
+                & .owl-item {
+        
+                    & .item{
+                      
+                        &.active{
+                          
+                        }
+                        &.item2{
+                   
+                        }
+                        &.item3{
+                     
+                        }
+    
+                        & .heroConternt{
+                        
+                            & .subheading{
+                       
+                            }
+                            & .heading{
+                          
+                            }
+                            & .pera{
+                             
+                            }
+                        }
+                      
+                    }
+                }
+            }
+        }
+        & .owl-dots{
+  
+            & .owl-dot{
+              
+                &.active{
+                 
+                }
+            }
+        }
+       }
+       
+    
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin heroSection-mixin-max-lg() {
+    .heroSection{
+      
+        & .heroOwl{
+         & .owl-stage-outer{
+        
+             & .owl-stage{
+       
+                 & .owl-item {
+         
+                     & .item{
+                       
+                         &.active{
+                           
+                         }
+                         &.item2{
+                    
+                         }
+                         &.item3{
+                      
+                         }
+     
+                         & .heroConternt{
+                         
+                             & .subheading{
+                        
+                             }
+                             & .heading{
+                                font-size: 50px;
+                                line-height: 59px;
+                             }
+                             & .pera{
+                              
+                             }
+                         }
+                       
+                     }
+                 }
+             }
+         }
+         & .owl-dots{
+   
+             & .owl-dot{
+               
+                 &.active{
+                  
+                 }
+             }
+         }
+        }
+        
+     
+     }
+}
+// Medium devices (tablets, less than 992px)
+@mixin heroSection-mixin-max-md() {
+    .heroSection{
+      
+        & .heroOwl{
+         & .owl-stage-outer{
+        
+             & .owl-stage{
+       
+                 & .owl-item {
+         
+                     & .item{
+                       
+                         &.active{
+                           
+                         }
+                         &.item2{
+                    
+                         }
+                         &.item3{
+                      
+                         }
+     
+                         & .heroConternt{
+                         
+                             & .subheading{
+                        
+                             }
+                             & .heading{
+                                font-size: 39px;
+                                line-height: 47px;
+                             }
+                             & .pera{
+                              
+                             }
+                         }
+                       
+                     }
+                 }
+             }
+         }
+         & .owl-dots{
+   
+             & .owl-dot{
+               
+                 &.active{
+                  
+                 }
+             }
+         }
+        }
+        
+     
+     }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin heroSection-mixin-max-sm() {
+    .heroSection{
+      
+        & .heroOwl{
+         & .owl-stage-outer{
+        
+             & .owl-stage{
+       
+                 & .owl-item {
+         
+                     & .item{
+                       
+                         &.active{
+                           
+                         }
+                         &.item2{
+                    
+                         }
+                         &.item3{
+                      
+                         }
+     
+                         & .heroConternt{
+                         
+                             & .subheading{
+                        
+                             }
+                             & .heading{
+                                font-size: 36px;
+                                line-height: 43px;
+                             }
+                             & .pera{
+                              
+                             }
+                         }
+                       
+                     }
+                 }
+             }
+         }
+         & .owl-dots{
+   
+             & .owl-dot{
+               
+                 &.active{
+                  
+                 }
+             }
+         }
+        }
+        
+     
+     }
+    
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin heroSection-mixin-max-xs() {
+    .heroSection{
+      
+        & .heroOwl{
+         & .owl-stage-outer{
+        
+             & .owl-stage{
+       
+                 & .owl-item {
+         
+                     & .item{
+                       
+                         &.active{
+                           
+                         }
+                         &.item2{
+                    
+                         }
+                         &.item3{
+                      
+                         }
+     
+                         & .heroConternt{
+                         
+                             & .subheading{
+                        
+                             }
+                             & .heading{
+                                font-size: 26px;
+                                line-height: 33px;
+                             }
+                             & .pera{
+                              
+                             }
+                         }
+                       
+                     }
+                 }
+             }
+         }
+         & .owl-dots{
+   
+             & .owl-dot{
+               
+                 &.active{
+                  
+                 }
+             }
+         }
+        }
+        
+     
+     }
+}
+
+// hero section end 
+// about us start 
 .aboutUs{
     & .aboutContent{
         & .subheading{
@@ -130,7 +437,7 @@
             background-position: center;
             width: 400px;
             height: 400px;
-            right: -130px;
+            right: -110px;
             border-radius: 50%;
             top:50%;
             transform: translateY(-50%);
@@ -146,6 +453,152 @@
     }
 }
 
+
+// Small devices (landscape phones, 576px and up)
+@mixin aboutUs-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin aboutUs-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin aboutUs-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin aboutUs-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin aboutUs-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin aboutUs-mixin-max-xl() {
+    .aboutUs{
+        & .aboutContent{
+            & .subheading{
+            
+            }
+            & .heading{
+           
+            }
+            & .pera{
+        
+            }
+        }
+        & .aboutImg{
+          
+            &::before{
+                right: -37px;
+            }
+        }
+        & .frameImg{
+
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin aboutUs-mixin-max-lg() {
+    .aboutUs{
+        & .aboutContent{
+            & .subheading{
+            
+            }
+            & .heading{
+                font-size: 37px;
+                line-height: 46px;
+            }
+            & .pera{
+        
+            }
+        }
+        & .aboutImg{
+          
+            &::before{
+                display: none;
+            }
+        }
+        & .frameImg{
+
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin aboutUs-mixin-max-md() {
+    .aboutUs{
+        & .aboutContent{
+            & .subheading{
+            
+            }
+            & .heading{
+           
+            }
+            & .pera{
+        
+            }
+        }
+        & .aboutImg{
+          padding: 0;
+            &::before{
+     
+            }
+        }
+        & .frameImg{
+
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin aboutUs-mixin-max-sm() {
+    .aboutUs{
+        & .aboutContent{
+            & .subheading{
+            
+            }
+            & .heading{
+                font-size: 30px;
+                line-height: 39px;
+            }
+            & .pera{
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+        & .aboutImg{
+          
+            &::before{
+     
+            }
+        }
+        & .frameImg{
+
+        }
+    }
+    
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin aboutUs-mixin-max-xs() {
+    .aboutUs{
+        & .aboutContent{
+            & .subheading{
+            
+            }
+            & .heading{
+                font-size: 22px;
+                line-height: 29px;
+            }
+            & .pera{
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+        & .aboutImg{
+          
+            &::before{
+     
+            }
+        }
+        & .frameImg{
+
+        }
+    }
+}
+
+// about end
+// service start 
 .service{
     & .servicesCard{
         padding: 55px 40px;
@@ -195,6 +648,181 @@
         
     }
 }
+// Small devices (landscape phones, 576px and up)
+@mixin service-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin service-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin service-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin service-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin service-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin service-mixin-max-xl() {
+    .service{
+        & .servicesCard{
+       
+            &:before{
+       
+                
+            }
+            &:hover{
+                &::before{
+                   
+                }
+                & .cardImg{
+                    
+                }
+            }
+                & .cardImg{
+                   
+    
+                }
+                & .heading{
+                
+                }
+                & .pera{
+                 
+                }
+            
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin service-mixin-max-lg() {
+    .service{
+        & .servicesCard{
+       
+            &:before{
+       
+                
+            }
+            &:hover{
+                &::before{
+                   
+                }
+                & .cardImg{
+                    
+                }
+            }
+                & .cardImg{
+                   
+    
+                }
+                & .heading{
+                
+                }
+                & .pera{
+                 
+                }
+            
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin service-mixin-max-md() {
+    .service{
+        & .servicesCard{
+       
+            &:before{
+       
+                
+            }
+            &:hover{
+                &::before{
+                   
+                }
+                & .cardImg{
+                    
+                }
+            }
+                & .cardImg{
+                   
+    
+                }
+                & .heading{
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+                & .pera{
+                 
+                }
+            
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin service-mixin-max-sm() {
+    .service{
+        & .servicesCard{
+       
+            &:before{
+       
+                
+            }
+            &:hover{
+                &::before{
+                   
+                }
+                & .cardImg{
+                    
+                }
+            }
+                & .cardImg{
+                   
+    
+                }
+                & .heading{
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+                & .pera{
+                    font-size: 14px;
+                }
+            
+        }
+    }
+    
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin service-mixin-max-xs() {
+    .service{
+        & .servicesCard{
+       
+            &:before{
+       
+                
+            }
+            &:hover{
+                &::before{
+                   
+                }
+                & .cardImg{
+                    
+                }
+            }
+                & .cardImg{
+                   
+    
+                }
+                & .heading{
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+                & .pera{
+                    font-size: 13px;
+                    line-height: 22px;
+                }
+            
+        }
+    }
+    
+}
+
+// service end 
+// daily offer start
 
 .dailyOffers{
     & .offerItem{
@@ -277,68 +905,372 @@
         }
     }
 }
+// Small devices (landscape phones, 576px and up)
+@mixin dailyOffers-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin dailyOffers-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin dailyOffers-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin dailyOffers-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin dailyOffers-mixin-min-xxl() {}
 
+// X-Large devices (large desktops, less than 1400px)
+@mixin dailyOffers-mixin-max-xl() {
+    .dailyOffers{
+        & .offerItem{
+            
+            &:hover{
+                & .hoverImg{
+                   
+                }
+            }
+            & .offerImg{
+              
+            }
+            & .heading{
+               
+            }
+            & .subheading{
+            
+                &::before   {
+                
+                }
+        
+            }
+            & .pera{
+             
+            }
+            & .hoverImg{
+           
+                &::before{
+                 
+                }
+         
+            }
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin dailyOffers-mixin-max-lg() {
+    .dailyOffers{
+        & .offerItem{
+            
+            &:hover{
+                & .hoverImg{
+                   
+                }
+            }
+            & .offerImg{
+              
+            }
+            & .heading{
+               
+            }
+            & .subheading{
+            
+                &::before   {
+                    width: 138px;
+                    left: 70px;
+                }
+        
+            }
+            & .pera{
+             
+            }
+            & .hoverImg{
+           
+                &::before{
+                 
+                }
+         
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin dailyOffers-mixin-max-md() {
+    .dailyOffers{
+        & .offerItem{
+            
+            &:hover{
+                & .hoverImg{
+                   
+                }
+            }
+            & .offerImg{
+              
+            }
+            & .heading{
+               
+            }
+            & .subheading{
+            
+                &::before   {
+                    width: 340px;
+                    left: 170px;
+                }
+        
+            }
+            & .pera{
+             
+            }
+            & .hoverImg{
+           
+                &::before{
+                 
+                }
+         
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin dailyOffers-mixin-max-sm() {
+    .dailyOffers{
+        & .offerItem{
+            
+            &:hover{
+                & .hoverImg{
+                   
+                }
+            }
+            & .offerImg{
+              
+            }
+            & .heading{
+                font-size: 20px;
+                line-height: 28px;
+            }
+            & .subheading{
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+
+                &::before   {
+                    width: 161px;
+                    left: 84px;
+
+                }
+        
+            }
+            & .pera{
+             
+            }
+            & .hoverImg{
+           
+                &::before{
+                 
+                }
+         
+            }
+        }
+    }
+    
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin dailyOffers-mixin-max-xs() {
+    .dailyOffers{
+        & .offerItem{
+            
+            &:hover{
+                & .hoverImg{
+                   display: none;
+                }
+            }
+            & .offerImg{
+                width: 60px;
+                height: 60px;
+            }
+            & .heading{
+                font-size: 18px;
+                line-height: 24px;
+            }
+            & .subheading{
+                font-size: 16px;
+                line-height: 22px;
+                &::before   {
+                   display: none;
+                }
+        
+            }
+            & .pera{
+             font-size: 12px;
+            }
+            & .hoverImg{
+           display: none;
+                &::before{
+                 display: none;
+                }
+         
+            }
+        }
+    }
+}
+// dalily offer end 
+
+// video section start
 .videoSection{
-    background-image: url(../img/Main-page/video.jpg);
-    background-position: 195px top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 1;
-    padding: 260px 0;
-    position: relative;
-    height: 600px;
-    z-index: 4;
-    &::before{
-        position: absolute;
-        content: '';
-        width: 400px;
-        height: 500px;
-        background-image: url(../img/Main-page/FRAME.svg);
+    & .frame{
+        left: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+    }
+    & .videoSection{
+        background-image: url(../img/Main-page/video.jpg);
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
-        left: 40px;
-        top: 50%;
-        transform:translateY(-50%);
-        border-radius: 50%;
-        z-index: -4;
-
-    }
-    & .videoPlay{
-        & a{
-            margin: auto;
-            text-decoration: none;
-            color:$theme1;
-            font-size: 28px;
-            width: 90px;
-            height: 90px;
-            line-height: 90px;
-            text-align: center;
-            display: inline-block;
-            background-color: $theme2;
-            border-radius: 90%;
-            animation: ripple 1s linear infinite;
-            position: absolute;
-            top: 45%;
-            left: 45%;
-            padding: 30px;
-
-        }
-        @keyframes ripple {
-            0% {
-                -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2), 0 0 0 5px rgba(255, 255, 255, 0.2), 0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 35px rgba(255, 255, 255, 0.2);
-                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2), 0 0 0 5px rgba(255, 255, 255, 0.2), 0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 35px rgba(255, 255, 255, 0.2);
+        opacity: 1;
+        // padding: 260px 0;
+        position: relative;
+        height: 520px;
+        z-index: 4;
+        & .videoPlay{
+            & a{
+                margin: auto;
+                text-decoration: none;
+                color:$theme1;
+                font-size: 28px;
+                width: 90px;
+                height: 90px;
+                line-height: 90px;
+                text-align: center;
+                display: inline-block;
+                background-color: $theme2;
+                border-radius: 90%;
+                animation: ripple 1s linear infinite;
+                position: absolute;
+                top: 45%;
+                left: 45%;
+                padding: 30px;
+    
             }
-        
-            100% {
-                -webkit-box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2), 0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 35px rgba(255, 255, 255, 0.2), 0 0 0 45px rgba(255, 255, 255, 0);
-                box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2), 0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 35px rgba(255, 255, 255, 0.2), 0 0 0 45px rgba(255, 255, 255, 0);
+            @keyframes ripple {
+                0% {
+                    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2), 0 0 0 5px rgba(255, 255, 255, 0.2), 0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 35px rgba(255, 255, 255, 0.2);
+                    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2), 0 0 0 5px rgba(255, 255, 255, 0.2), 0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 35px rgba(255, 255, 255, 0.2);
+                }
+            
+                100% {
+                    -webkit-box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2), 0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 35px rgba(255, 255, 255, 0.2), 0 0 0 45px rgba(255, 255, 255, 0);
+                    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2), 0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 35px rgba(255, 255, 255, 0.2), 0 0 0 45px rgba(255, 255, 255, 0);
+                }
+            
             }
-        
         }
     }
 }
 
+// Small devices (landscape phones, 576px and up)
+@mixin videoSection-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin videoSection-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin videoSection-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin videoSection-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin videoSection-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin videoSection-mixin-max-xl() {
+    .videoSection{
+        & .frame{
+      
+        }
+        & .videoSection{
+        
+            & .videoPlay{
+                & a{
+       
+        
+                }
+              
+            }
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin videoSection-mixin-max-lg() {
+    .videoSection{
+        & .frame{
+      
+        }
+        & .videoSection{
+        
+            & .videoPlay{
+                & a{
+       
+        
+                }
+              
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin videoSection-mixin-max-md() {
+    .videoSection{
+        & .frame{
+      
+        }
+        & .videoSection{
+            height: 425px;
+            & .videoPlay{
+                & a{
+       
+        
+                }
+              
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin videoSection-mixin-max-sm() {
+    .videoSection{
+        & .frame{
+      
+        }
+        & .videoSection{
+            height: 370px;
+        
+            & .videoPlay{
+                & a{
+                    width: 65px;
+                    height: 65px;
+                    padding: 20px;
+                }
+              
+            }
+        }
+    }
+    
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin videoSection-mixin-max-xs() {
+    .videoSection{
+        & .frame{
+      
+        }
+        & .videoSection{
+            height: 350px;
+            & .videoPlay{
+                & a{
+       
+        
+                }
+              
+            }
+        }
+    }
+}
+// video section end 
+ 
+// table form start 
 .tableForm{
     & .formStyle{
         & .form-control{
@@ -355,9 +1287,93 @@
     }
 }
 
+// Small devices (landscape phones, 576px and up)
+@mixin tableForm-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin tableForm-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin tableForm-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin tableForm-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin tableForm-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin tableForm-mixin-max-xl() {
+    .tableForm{
+        & .formStyle{
+            & .form-control{
+       
+                &::placeholder{
+                  
+                }
+            }
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin tableForm-mixin-max-lg() {
+    .tableForm{
+        & .formStyle{
+            & .form-control{
+       
+                &::placeholder{
+                  
+                }
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin tableForm-mixin-max-md() {
+    .tableForm{
+        & .formStyle{
+            & .form-control{
+       
+                &::placeholder{
+                  
+                }
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin tableForm-mixin-max-sm() {
+    .tableForm{
+        & .formStyle{
+            & .form-control{
+       
+                &::placeholder{
+                  
+                }
+            }
+        }
+    }
+    
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin tableForm-mixin-max-xs() {
+    .tableForm{
+        & .formStyle{
+            & .form-control{
+                height: 39px;
+                font-size: 12px;
+                &::placeholder{
+                  
+                }
+            }
+        }
+    }
+}
+
+// table form end 
+
+// portfolio start
+
 .portfolio{
     & .portfolioOwl {
         & .owl-stage-outer{
+            padding: 0;
             & .owl-stage{
                 & .owl-item{
                     & .item{
@@ -400,8 +1416,205 @@
    
 }
 
+// Small devices (landscape phones, 576px and up)
+@mixin portfolio-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin portfolio-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin portfolio-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin portfolio-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin portfolio-mixin-min-xxl() {}
 
+// X-Large devices (large desktops, less than 1400px)
+@mixin portfolio-mixin-max-xl() {
+    .portfolio{
+        & .portfolioOwl {
+            & .owl-stage-outer{
+              
+                & .owl-stage{
+                    & .owl-item{
+                        & .item{
+                           
+                            
+                            &:hover{
+                                & .hoverImg{
+                               
+                                }
+                            }
+                            & .portfolioImg{
+                            }
+                            & .hoverImg{
+                             
+                                & .subheading{
+                                    
+                                }
+                                & .heading{
+                                
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+    
+}
+// Large devices (desktops, less than 1200px)
+@mixin portfolio-mixin-max-lg() {
+    .portfolio{
+        & .portfolioOwl {
+            & .owl-stage-outer{
+              
+                & .owl-stage{
+                    & .owl-item{
+                        & .item{
+                           
+                            
+                            &:hover{
+                                & .hoverImg{
+                               
+                                }
+                            }
+                            & .portfolioImg{
+                            }
+                            & .hoverImg{
+                             
+                                & .subheading{
+                                    
+                                }
+                                & .heading{
+                                
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin portfolio-mixin-max-md() {
+    .portfolio{
+        & .portfolioOwl {
+            & .owl-stage-outer{
+              
+                & .owl-stage{
+                    & .owl-item{
+                        & .item{
+                           
+                            
+                            &:hover{
+                                & .hoverImg{
+                               
+                                }
+                            }
+                            & .portfolioImg{
+                            }
+                            & .hoverImg{
+                             
+                                & .subheading{
+                                    
+                                }
+                                & .heading{
+                                
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin portfolio-mixin-max-sm() {
+    .portfolio{
+        & .portfolioOwl {
+            & .owl-stage-outer{
+              
+                & .owl-stage{
+                    & .owl-item{
+                        & .item{
+                           
+                            
+                            &:hover{
+                                & .hoverImg{
+                               
+                                }
+                            }
+                            & .portfolioImg{
+                            }
+                            & .hoverImg{
+                             
+                                & .subheading{
+                                    
+                                }
+                                & .heading{
+                                
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+    
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin portfolio-mixin-max-xs() {
+    .portfolio{
+        & .portfolioOwl {
+            & .owl-stage-outer{
+              
+                & .owl-stage{
+                    & .owl-item{
+                        & .item{
+                           
+                            
+                            &:hover{
+                                & .hoverImg{
+                               
+                                }
+                            }
+                            & .portfolioImg{
+                            }
+                            & .hoverImg{
+                             
+                                & .subheading{
+                                    font-size: 14px;
+                                    line-height: 22px;
+                                }
+                                & .heading{
+                                font-size: 18px;
+                                line-height: 26px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+}
+
+// portfolio end 
+
+// counter start 
  .counter{
+    & .counterImg{
+        min-width: 70px;
+        min-height: 92px;
+    }
     & .counterHeading{
         font-size: 48px;
         line-height: 58px;
@@ -413,6 +1626,84 @@
         color: $theme2;
     }
 }
+ 
+// Small devices (landscape phones, 576px and up)
+@mixin counter-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin counter-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin counter-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin counter-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin counter-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin counter-mixin-max-xl() {
+    .counter{
+        & .counterHeading{
+         
+        }
+        & .counterSubheading{
+           
+        }
+    }
+    
+}
+// Large devices (desktops, less than 1200px)
+@mixin counter-mixin-max-lg() {
+    .counter{
+        & .counterHeading{
+            font-size: 36px;
+            line-height: 42px;
+        }
+        & .counterSubheading{
+           
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin counter-mixin-max-md() {
+    .counter{
+        & .counterHeading{
+         
+        }
+        & .counterSubheading{
+           
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin counter-mixin-max-sm() {
+    .counter{
+        & .counterHeading{
+            font-size: 30px;
+            line-height: 36px;
+        }
+        & .counterSubheading{
+            font-size: 16px;
+            line-height: 25px;
+
+        }
+    }
+    
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin counter-mixin-max-xs() {
+    .counter{
+        & .counterHeading{
+         
+        }
+        & .counterSubheading{
+           
+        }
+    }
+}
+
+
+// counter  end 
+
+// teamsection :start 
 
 .teamsection{
     & .teamOwl{
@@ -480,13 +1771,288 @@
     }
 }
 
+// Small devices (landscape phones, 576px and up)
+@mixin teamsection-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin teamsection-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin teamsection-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin teamsection-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin teamsection-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin teamsection-mixin-max-xl() {
+    .teamsection{
+        & .teamOwl{
+            & .owl-stage-outer{
+                & .owl-stage{
+                    & .owl-item{
+                        & .item{
+                            
+                            & .teamStyle{
+                                
+                                & .socialIcon{
+                               
+                                    & ul{
+                                        & li{
+                                            & a{
+                                         
+                                             
+                                            }
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                        & .socialIcon{
+                                           
+                                        }
+                                }
+                            }
+                            & .heading{
+                               
+                            }
+                            & .subheading{
+                   
+                            }
+                        }
+                    }
+                }
+            }
+            & .owl-dots{
+           
+                & .owl-dot{
+             
+                    &.active{
+                      
+                    }
+                }
+            }
+        }
+    }
+    
+}
+// Large devices (desktops, less than 1200px)
+@mixin teamsection-mixin-max-lg() {
+    .teamsection{
+        & .teamOwl{
+            & .owl-stage-outer{
+                & .owl-stage{
+                    & .owl-item{
+                        & .item{
+                            
+                            & .teamStyle{
+                                
+                                & .socialIcon{
+                               
+                                    & ul{
+                                        & li{
+                                            & a{
+                                         
+                                             
+                                            }
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                        & .socialIcon{
+                                           
+                                        }
+                                }
+                            }
+                            & .heading{
+                               
+                            }
+                            & .subheading{
+                   
+                            }
+                        }
+                    }
+                }
+            }
+            & .owl-dots{
+           
+                & .owl-dot{
+             
+                    &.active{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin teamsection-mixin-max-md() {
+    .teamsection{
+        & .teamOwl{
+            & .owl-stage-outer{
+                & .owl-stage{
+                    & .owl-item{
+                        & .item{
+                            
+                            & .teamStyle{
+                                
+                                & .socialIcon{
+                               
+                                    & ul{
+                                        & li{
+                                            & a{
+                                         
+                                             
+                                            }
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                        & .socialIcon{
+                                           
+                                        }
+                                }
+                            }
+                            & .heading{
+                               
+                            }
+                            & .subheading{
+                   
+                            }
+                        }
+                    }
+                }
+            }
+            & .owl-dots{
+           
+                & .owl-dot{
+             
+                    &.active{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin teamsection-mixin-max-sm() {
+    .teamsection{
+        & .teamOwl{
+            & .owl-stage-outer{
+                & .owl-stage{
+                    & .owl-item{
+                        & .item{
+                            
+                            & .teamStyle{
+                                
+                                & .socialIcon{
+                               
+                                    & ul{
+                                        & li{
+                                            & a{
+                                                width: 50px;
+                                                height: 50px;
+                                                padding: 18px;
+                                             
+                                            }
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                        & .socialIcon{
+                                           
+                                        }
+                                }
+                            }
+                            & .heading{
+                                font-size: 24px;
+                                line-height: 32px;
+                            }
+                            & .subheading{
+                   
+                            }
+                        }
+                    }
+                }
+            }
+            & .owl-dots{
+                margin-top: 20px;
+                & .owl-dot{
+             
+                    &.active{
+                      
+                    }
+                }
+            }
+        }
+    }
+    
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin teamsection-mixin-max-xs() {
+    .teamsection{
+        & .teamOwl{
+            & .owl-stage-outer{
+                & .owl-stage{
+                    & .owl-item{
+                        & .item{
+                            
+                            & .teamStyle{
+                                
+                                & .socialIcon{
+                               
+                                    & ul{
+                                        & li{
+                                            & a{
+                                                width: 40px;
+                                                height: 40px;
+                                                padding: 15px;
+                                             
+                                            }
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                        & .socialIcon{
+                                           
+                                        }
+                                }
+                            }
+                            & .heading{
+                                font-size: 18px;
+                                line-height: 26px;
+                            }
+                            & .subheading{
+                                font-size: 14px;
+                                line-height: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+            & .owl-dots{
+                margin-top: 0px;
+                
+                & .owl-dot{
+             
+                    &.active{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+// team section end 
+
+// testimonal start 
+
 .testimonal{
     background-image: url(../img/Main-page/bg-img.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 630px;
-    height: 100%;
+    height: 630px;
+    
     & .testimonalBox{
         height: 100%;
         & .owl-stage-outer{
@@ -529,6 +2095,12 @@
                                     line-height: 24px;
                                 }
                             }
+                            & .rating{
+                            & .icon{
+                                width: 20px;
+                                height: 20px;
+                            }
+                            }
                         }
                     }
                 }
@@ -558,6 +2130,309 @@
     }
 }
 
+// Small devices (landscape phones, 576px and up)
+@mixin testimonal-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin testimonal-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin testimonal-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin testimonal-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin testimonal-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin testimonal-mixin-max-xl() {
+    .testimonal{
+      
+        & .testimonalBox{
+           
+            & .owl-stage-outer{
+               
+                & .owl-stage{
+                    
+                    & .owl-item{
+                    
+                        & .item{
+                         
+                            & .testimonalSection{
+                           
+                                & .testimonial-info{
+                                    & .userImg{
+                                   
+                                    }
+                                    & .userName{
+                               
+                                    }
+                                    & .userSubTitle{
+                                      
+    
+                                    }
+                                    & .qoute{
+                                    
+                                    }
+                                }
+                                & .testimonial-content{
+                                    & .pera{
+                                  
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .owl-dots{
+           
+                & .owl-dot{
+                
+                    &:hover{
+          
+                    }
+                    &.active{
+                  
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
+// Large devices (desktops, less than 1200px)
+@mixin testimonal-mixin-max-lg() {
+    .testimonal{
+      
+        & .testimonalBox{
+           
+            & .owl-stage-outer{
+               
+                & .owl-stage{
+                    
+                    & .owl-item{
+                    
+                        & .item{
+                         
+                            & .testimonalSection{
+                           
+                                & .testimonial-info{
+                                    & .userImg{
+                                        width: 80px;
+                                        height: 80px;
+                                    }
+                                    & .userName{
+                                        font-size: 20px;
+                                        line-height: 28px;
+                                    }
+                                    & .userSubTitle{
+                                      
+    
+                                    }
+                                    & .qoute{
+                                        width: 50px;
+                                        height: 70px;
+                                    }
+                                }
+                                & .testimonial-content{
+                                    & .pera{
+                                  
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .owl-dots{
+           
+                & .owl-dot{
+                
+                    &:hover{
+          
+                    }
+                    &.active{
+                  
+                    }
+                }
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin testimonal-mixin-max-md() {
+    .testimonal{
+      height: 418px;
+        & .testimonalBox{
+           
+            & .owl-stage-outer{
+               
+                & .owl-stage{
+                    
+                    & .owl-item{
+                    
+                        & .item{
+                         
+                            & .testimonalSection{
+                           
+                                & .testimonial-info{
+                                    & .userImg{
+                                   
+                                    }
+                                    & .userName{
+                               
+                                    }
+                                    & .userSubTitle{
+                                      
+    
+                                    }
+                                    & .qoute{
+                                    
+                                    }
+                                }
+                                & .testimonial-content{
+                                    & .pera{
+                                  
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .owl-dots{
+           
+                & .owl-dot{
+                
+                    &:hover{
+          
+                    }
+                    &.active{
+                  
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin testimonal-mixin-max-sm() {
+    .testimonal{
+        height: 360px;
+        & .testimonalBox{
+           
+            & .owl-stage-outer{
+               
+                & .owl-stage{
+                    
+                    & .owl-item{
+                    
+                        & .item{
+                         
+                            & .testimonalSection{
+                           
+                                & .testimonial-info{
+                                    & .userImg{
+                                   
+                                    }
+                                    & .userName{
+                               
+                                    }
+                                    & .userSubTitle{
+                                      
+    
+                                    }
+                                    & .qoute{
+                                    
+                                    }
+                                }
+                                & .testimonial-content{
+                                    & .pera{
+                                        font-size: 14px;
+                                        color: rgba(255,255,255,.8);
+                                        line-height: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .owl-dots{
+                // bottom: 119px;
+                & .owl-dot{
+                
+                    &:hover{
+          
+                    }
+                    &.active{
+                  
+                    }
+                }
+            }
+        }
+    }
+    
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin testimonal-mixin-max-xs() {
+    .testimonal{
+        height:380px;
+        & .testimonalBox{
+           
+            & .owl-stage-outer{
+               
+                & .owl-stage{
+                    
+                    & .owl-item{
+                    
+                        & .item{
+                         
+                            & .testimonalSection{
+                           
+                                & .testimonial-info{
+                                    & .userImg{
+                                        width: 60px;
+                                        height: 60px;
+                                    }
+                                    & .userName{
+                               
+                                    }
+                                    & .userSubTitle{
+                                      
+    
+                                    }
+                                    & .qoute{
+                                    
+                                    }
+                                }
+                                & .testimonial-content{
+                                    & .pera{
+                                  
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .owl-dots{
+                bottom: 25px;
+                & .owl-dot{
+                
+                    &:hover{
+          
+                    }
+                    &.active{
+                  
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .testimonal end 
+//  blog section :start 
 .blogSection{
     & .blogCard{
         transition: all 0.3s ease-in-out;
@@ -664,3 +2539,354 @@
         }
     }
 }
+
+// Small devices (landscape phones, 576px and up)
+@mixin blogSection-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin blogSection-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin blogSection-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin blogSection-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin blogSection-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin blogSection-mixin-max-xl() {
+    .blogSection{
+        & .blogCard{
+         
+            & .cardImg{
+                & img{
+                    
+    
+                }
+                &:hover{
+                    & img{
+                        
+                    }
+                }
+            }
+            & .date{
+      
+                & a{
+                   
+                }
+            }
+            & .card-body{
+             & .blogMeta{
+                & .subheading{
+                 
+                    & .icon{
+                    
+                    }
+                }
+             }
+             & .blogTitle{
+              
+             }
+             & .blogPera{
+          
+             }
+             & .cardButton{
+              
+                &:hover{
+                    & a{
+                       
+                    }
+                    &::before{
+                      
+                    }
+                    &::after{
+                       
+                    }
+                }
+                &::before{
+   
+                }
+                &::after{
+   
+    
+                }
+                & a{
+                    
+    
+                }
+            
+             }
+            }
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin blogSection-mixin-max-lg() {
+    .blogSection{
+        & .blogCard{
+         
+            & .cardImg{
+                & img{
+                    
+    
+                }
+                &:hover{
+                    & img{
+                        
+                    }
+                }
+            }
+            & .date{
+      
+                & a{
+                   
+                }
+            }
+            & .card-body{
+             & .blogMeta{
+                & .subheading{
+                 
+                    & .icon{
+                    
+                    }
+                }
+             }
+             & .blogTitle{
+              
+             }
+             & .blogPera{
+          
+             }
+             & .cardButton{
+              
+                &:hover{
+                    & a{
+                       
+                    }
+                    &::before{
+                      
+                    }
+                    &::after{
+                       
+                    }
+                }
+                &::before{
+   
+                }
+                &::after{
+   
+    
+                }
+                & a{
+                    
+    
+                }
+            
+             }
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin blogSection-mixin-max-md() {
+    .blogSection{
+        & .blogCard{
+         
+            & .cardImg{
+                & img{
+                    
+    
+                }
+                &:hover{
+                    & img{
+                        
+                    }
+                }
+            }
+            & .date{
+      
+                & a{
+                   
+                }
+            }
+            & .card-body{
+             & .blogMeta{
+                & .subheading{
+                 
+                    & .icon{
+                    
+                    }
+                }
+             }
+             & .blogTitle{
+              
+             }
+             & .blogPera{
+          
+             }
+             & .cardButton{
+              
+                &:hover{
+                    & a{
+                       
+                    }
+                    &::before{
+                      
+                    }
+                    &::after{
+                       
+                    }
+                }
+                &::before{
+   
+                }
+                &::after{
+   
+    
+                }
+                & a{
+                    
+    
+                }
+            
+             }
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin blogSection-mixin-max-sm() {
+    .blogSection{
+        & .blogCard{
+         
+            & .cardImg{
+                & img{
+                    
+    
+                }
+                &:hover{
+                    & img{
+                        
+                    }
+                }
+            }
+            & .date{
+      
+                & a{
+                   
+                }
+            }
+            & .card-body{
+             & .blogMeta{
+                & .subheading{
+                 
+                    & .icon{
+                    
+                    }
+                }
+             }
+             & .blogTitle{
+              
+             }
+             & .blogPera{
+          
+             }
+             & .cardButton{
+              
+                &:hover{
+                    & a{
+                       
+                    }
+                    &::before{
+                      
+                    }
+                    &::after{
+                       
+                    }
+                }
+                &::before{
+   
+                }
+                &::after{
+   
+    
+                }
+                & a{
+                    
+    
+                }
+            
+             }
+            }
+        }
+    }
+    
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin blogSection-mixin-max-xs() {
+    .blogSection{
+        & .blogCard{
+         
+            & .cardImg{
+                & img{
+                    
+    
+                }
+                &:hover{
+                    & img{
+                        
+                    }
+                }
+            }
+            & .date{
+      
+                & a{
+                   
+                }
+            }
+            & .card-body{
+             & .blogMeta{
+                & .subheading{
+                 
+                    & .icon{
+                    
+                    }
+                }
+             }
+             & .blogTitle{
+                font-size: 18px;
+                line-height: 26px;
+            
+             }
+             & .blogPera{
+                font-size: 13px;
+                line-height: 19px;
+             }
+             & .cardButton{
+              
+                &:hover{
+                    & a{
+                       
+                    }
+                    &::before{
+                      
+                    }
+                    &::after{
+                       
+                    }
+                }
+                &::before{
+   
+                }
+                &::after{
+   
+    
+                }
+                & a{
+                }
+            
+             }
+            }
+        }
+    }
+}
+
+// blog section end 
