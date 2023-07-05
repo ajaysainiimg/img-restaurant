@@ -1611,17 +1611,17 @@
 // counter start 
  .counter{
     & .counterImg{
-        min-width: 70px;
-        min-height: 92px;
+        width: 70px;
+        height: 92px;
     }
     & .counterHeading{
         font-size: 48px;
-        line-height: 58px;
+        line-height: 39px;
         color:$theme2;
     }
     & .counterSubheading{
         font-size: 18px;
-        line-height: 28px;
+        line-height: 24px;
         color: $theme2;
     }
 }
@@ -1675,9 +1675,13 @@
 // Small devices (landscape phones, less than 768px)
 @mixin counter-mixin-max-sm() {
     .counter{
+        & .counterImg{
+            width: 60px;
+            height: 60px;
+        }
         & .counterHeading{
             font-size: 30px;
-            line-height: 36px;
+            line-height: 29px;
         }
         & .counterSubheading{
             font-size: 16px;
@@ -1690,11 +1694,17 @@
 // X-Small devices (portrait phones, less than 576px)
 @mixin counter-mixin-max-xs() {
     .counter{
+        & .counterImg{
+            width: 40px;
+            height: 40px;
+        }
         & .counterHeading{
-         
+            font-size: 20px;
+            line-height: 26px;
         }
         & .counterSubheading{
-           
+            font-size: 14px;
+            line-height: 20px;
         }
     }
 }
